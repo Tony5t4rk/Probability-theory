@@ -3,6 +3,7 @@
 \documentclass[UTF8,10pt]{ctexart}
 
 \usepackage{amsmath}
+\usepackage{extarrows}
 
 \begin{document}
 	% 标题
@@ -51,12 +52,9 @@
 	\subsubsection{事件间的关系与事件的运算}
 	
 	\begin{enumerate}
-		\item [1.] 若 $ A \subset B $ ，则称事件 $ B $ 包含事件 $ A $ ，这指的是事件 $ A $ 发生必导致事件 $ B $ 发生. \\ 
-					若 $ A \subset B $ 且 $ B \subset A $ ，即 $ A = B $ ，则称事件 $ A $ 与事件 $ B $  \textbf{相等}.
-		\item [2.] 事件 $ A \cup B=\{x|x \in A 或 x \in B\} $ 称为事件 $ A $ 与事件 $ B $ 的 \textbf{和事件}.当且仅当 $ A,B $ 中至少一个发生时，事件 $ A \cup B $ 发生. \\ 
-					类似地，称 $ \bigcup\limits_{k=1}^{n}A_{k} $ 为 $ n $ 个事件 $ A_{1},A_{2}, \cdots ,A_{n} $ 的 \textbf{和事件}；称 $ \bigcup\limits_{k=1}^{\infty}A_{k} $ 为可列个事件 $ A_{1},A_{2}, \cdots $ 的和事件.
-		\item [3.] 事件 $ A \cap B=\{x|x \in A 且 x \in B\} $ 称为事件 $ A $ 与事件 $ B $ 的 \textbf{积事件}.当且仅当 $ A,B $ 同时发生时，事件 $ A \cap B $ 发生. $ A \cap B $ 也记作 $ AB $ . \\ 
-					类似地，称 $ \bigcap\limits_{k=1}^{n}A_{k} $ 为 $ n $ 个事件 $ A_{1},A_{2}, \cdots ,A_{n} $ 的 \textbf{积事件}；称 $ \bigcap\limits_{k=1}^{\infty}A_{k} $ 为可列个事件 $ A_{1},A_{2}, \cdots $ 的积事件.
+		\item [1.] 若 $ A \subset B $ ，则称事件 $ B $ 包含事件 $ A $ ，这指的是事件 $ A $ 发生必导致事件 $ B $ 发生. \\ 若 $ A \subset B $ 且 $ B \subset A $ ，即 $ A = B $ ，则称事件 $ A $ 与事件 $ B $  \textbf{相等}.
+		\item [2.] 事件 $ A \cup B=\{x|x \in A 或 x \in B\} $ 称为事件 $ A $ 与事件 $ B $ 的 \textbf{和事件}.当且仅当 $ A,B $ 中至少一个发生时，事件 $ A \cup B $ 发生. \\ 类似地，称 $ \bigcup\limits_{k=1}^{n}A_{k} $ 为 $ n $ 个事件 $ A_{1},A_{2}, \cdots ,A_{n} $ 的 \textbf{和事件}；称 $ \bigcup\limits_{k=1}^{\infty}A_{k} $ 为可列个事件 $ A_{1},A_{2}, \cdots $ 的和事件.
+		\item [3.] 事件 $ A \cap B=\{x|x \in A 且 x \in B\} $ 称为事件 $ A $ 与事件 $ B $ 的 \textbf{积事件}.当且仅当 $ A,B $ 同时发生时，事件 $ A \cap B $ 发生. $ A \cap B $ 也记作 $ AB $ . \\ 类似地，称 $ \bigcap\limits_{k=1}^{n}A_{k} $ 为 $ n $ 个事件 $ A_{1},A_{2}, \cdots ,A_{n} $ 的 \textbf{积事件}；称 $ \bigcap\limits_{k=1}^{\infty}A_{k} $ 为可列个事件 $ A_{1},A_{2}, \cdots $ 的积事件.
 		\item [4.] 事件 $ A-B=\{x|x \in A 且 x \notin B\} $ 称为事件 $ A $ 与事件 $ B $ 的 \textbf{差事件}.当且仅当 $ A $ 发生、 $ B $ 不发生时事件 $ A-B $ 发生.
 		\item [5.] 若 $ A \cap B= \emptyset $ 则称事件 $ A $ 与事件 $ B $ 是 \textbf{互不相容的}，或 \textbf{互斥的}.这指的是事件 $ A $ 与事件 $ B $ 不能同时发生.基本事件也是两两互不相容的.
 		\item [6.] 若 $ A \cup B=S $ 且 $ A \cap B= \emptyset $ ，则称事件 $ A $ 与事件 $ B $ 互为 \textbf{逆事件}. 又称事件 $ A $ 与事件 $ B $ 互为 \textbf{对立事件}.这指的是对每次试验而言，事件 $ A,B $ 中必有一个发生，且仅有一个发生. $ A $ 的对立事件记为 $ \bar{A} $. $ \bar{A} =S-A $ 
@@ -223,9 +221,7 @@
 	易知 $$ \Phi(-x) =1- \Phi(x). $$
 
 	\begin{itemize}
-		\item [引理:] {
-			若 $ X \sim N( \mu , \sigma ^{2}) $ ，则 $ Z= \frac{X- \mu }{ \sigma } \sim N(0,1) $ .
-		}
+		\item [引理:] 若 $ X \sim N( \mu , \sigma ^{2}) $ ，则 $ Z= \frac{X- \mu }{ \sigma } \sim N(0,1) $ .
 	\end{itemize}
 	
 	\subsection{随机变量的函数的分布}
@@ -233,7 +229,45 @@
 	设随机变量 $ X $ 具有概率密度 $ f_X(x),- \infty <x< \infty $ ，又设函数 $ g(x) $ 处处可导且恒有 $ g'(x)>0 $ （或恒有 $ g'(x)<0 $ ）.则 $ Y=g(X) $ 是连续型随机变量，其概率密度为 $$ f_{Y}(y)= \begin{cases} f_{X}[h(y)]|h'(y)|, & \alpha <y< \beta, \\ 0, & \mbox{其他},\\ \end{cases} $$ 其中 $ \alpha = \min\{g(- \infty ),g( \infty )\}, \beta = \max\{g(- \infty ),g( \infty )\} $ ， $ h(y) $ 是 $ g(x) $ 的反函数.
 	
 	\section{第三章\ 多维随机变量及其分布}
+	
 	\subsection{二维随机变量}
+	
+	一般，设 $ E $ 是一个随机试验，它的样本空间是 $ S=\{e\} $ ，设 $ X=X(e) $ 和 $ Y=Y(e) $ 是定义在 $ S $ 上的随机变量，由它们构成的一个向量 $ (X,Y) $ ，叫做 \textbf{二维随机向量} 或 \textbf{二维随机变量}.
+	
+	设 $ (X,Y) $ 是二维随机变量，对于任意实数 $ x,y $ ，二元函数 $$ F(x,y)=P\{(X \le x) \cap (Y \le y)\} \xlongequal{\mbox{记成}} P\{X \le x,Y \le y\} $$ 称为二维随机变量 $ (X,Y) $ 的分布函数，或称为随机变量 $ X $ 和 $ Y $ 的 \textbf{联合分布函数}.
+	
+	\begin{itemize}
+		\item [性质:] {
+			\begin{enumerate}
+				\item [1.] $ F(x,y) $ 是变量 $ x $ 和 $ y $ 的不减函数，即对于固定的 $ y $ ，当 $ x_{2}>x_{1} $ 时， $ F(x_{2},y) \ge F(x_{1},y) $ ；对于任意固定的 $ x $ ，当 $ y_{2}>y_{1} $ 时， $ F(x,y_{2}) \ge F(x,y_{1}) $.
+				\item [2.] $ 0 \le F(x,y) \le 1 $ ，且 $$ \mbox{对于任意固定的} y,F(- \infty ,y)=0, $$ $$ \mbox{对于任意固定的} y,F(x,- \infty )=0, $$ $$ F(- \infty ,- \infty )=0,F( \infty , \infty )=1 $$.
+				\item [3.] $ F(x+0,y)=F(x,y),F(x,y+0)=F(x,y) $ ，即 $ F(x,y) $ 关于 $ x $ 右连续，关于 $ y $ 也右连续.
+				\item [4.] 对于任意 $ (x_{1},y_{1}) $ ， $ (x_{2},y_{2}) $ ， $ x_{1}<x_{2} $ ， $ y_{1}<y_{2} $ ，下述不等式成立： $$ F(x_{2},y_{2})-F(x_{2},y_{1})+F(x_{1},y_{1})-F(x_{1},y_{2}) \ge 0. $$
+			\end{enumerate}
+		}
+	\end{itemize}
+
+	如果二维随机变量 $ (X,Y) $ 全部可能取到的值是有限对或可列无限多对，则称 $ (X,Y) $ 是 \textbf{离散型的随机变量}.
+	
+	我们称 $ P\{X=x_{i},Y=y_{i}\}=p_{ij},i,j=1,2, \cdots $ 为二位离散型随机变量 $ (X,Y) $ 的 \textbf{分布律}，或称随机变量 $ X $ 和 $ Y $ 的 \textbf{联合分布律}.
+	
+	对于二维随机变量 $ (X,Y) $ 的分布函数 $ F(x,y) $ ，如果存在非负可积函数 $ f(x,y) $ ，使对于任意 $ x,y $ 有 $$ F(x,y)= \int_{- \infty }^{ y } \int_{- \infty }^{ x } f(u,v){\rm d}u{\rm d}v, $$ 则称 $ (X,y) $ 是 \textbf{连续型的二维随机变量}，函数 $ f(x,y) $ 称为二维随机变量 $ (X,Y) $ 的 \textbf{概率密度}，或称为随机变量 $ X $ 和 $ Y $ 的 \textbf{联合概率密度}.
+	
+	\begin{itemize}
+		\item [概率密度 $ f(x,y) $ 具有以下性质:] {
+			\begin{enumerate}
+				\item [1.] $ f(x,y) \ge 0 $
+				\item [2.] $ \int_{- \infty }^{ \infty } \int_{- \infty }^{ \infty }{\rm d}x{\rm y}=F( \infty , \infty )=1. $
+				\item [3.] 设 $ G $ 是 $ xOy $ 平面上的区域，点 $ (X,Y) $ 落在 $ G $ 内的概率为 $$ P\{(X,Y) \in G \}= \iint\limits_{G} f(x,y){\rm d}x{\rm d}y. $$
+				\item [4.] 若 $ f(x,y) $ 在点 $ (x,y) $ 连续，则有 $$ \frac{ \partial ^{2} F(x,y) }{ \partial x \partial y }=f(x,y). $$
+			\end{enumerate}
+		}
+	\end{itemize}
+
+	设 $ E $ 是一个随机试验，它的样本空间是 $ S=\{e\} $ ，设 $ X_{1}=X_{1}(e),X_{2}=X_{2}(e), \cdots , X_{n}=X_{n}(e) $ 是定义在 $ S $ 上的随机变量，由它们构成的一个 $ n $ 维向量 $ (X_{1},X_{2}, \cdots , X_{n}) $ 叫做 $ n $ \textbf{维随即向量}或 $ n $ 维随机变量.
+	
+	对于任意 $ n $ 个实验 $ x_{1},x_{2}, \cdots ,x_{n},n $ 元函数 $$ F(x_{1},x_{2}, \cdots ,x_{n})=P\{X_{1} \le x_{1},X_{2} \le x_{2}, \cdots ,X_{n} \le x_{n} \} $$ 称为 $ n $ 维随机变量 $ (X_{1},X_{2}, \cdots ,X_{n}) $ 的 \textbf{分布函数}，或随机变量 $ X_{1},X_{2}, \cdots ,X_{n} $ 的 \textbf{联合分布函数}.
+	
 	\subsection{边缘分布}
 	\subsection{条件分布}
 	\subsection{相互独立的随机变量}
