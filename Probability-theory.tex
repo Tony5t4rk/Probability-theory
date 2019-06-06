@@ -1,4 +1,6 @@
-\documentclass[UTF8]{ctexart}
+% !TeX spellcheck = en_US
+% !TeX encoding = UTF-8
+\documentclass[UTF8,10pt]{ctexart}
 
 \usepackage{amsmath}
 
@@ -20,9 +22,9 @@
 	\begin{itemize}
 		\item [随机试验:] {
 			\begin{enumerate}
-				\item [1.] {可以在相同条件下重复地进行;}
-				\item [2.] {每次试验的可能结果不止一个，并且能事先明确实验的所有可能结果;}
-				\item [3.] {进行一次实验之前不能确定哪一个结果会出现.}
+				\item [1.] 可以在相同条件下重复地进行;
+				\item [2.] 每次试验的可能结果不止一个，并且能事先明确实验的所有可能结果;
+				\item [3.] 进行一次实验之前不能确定哪一个结果会出现.
 			\end{enumerate}
 		}
 	\end{itemize}
@@ -31,76 +33,76 @@
 	
 	\subsubsection{样本空间}
 	
-	{随机试验E的所有可能结果组成的集合称为 \textbf{随机试验}.}
+	随机试验E的所有可能结果组成的集合称为 \textbf{随机试验}.
 	
-	{样本空间的元素，即E的每个结果称为 \textbf{样本点}.}
+	样本空间的元素，即E的每个结果称为 \textbf{样本点}.
 	\subsubsection{随机事件}
 	
-	{试验E的样本空间S的子集称为 \textbf{随机事件}，简称 \textbf{事件}.}
+	试验E的样本空间S的子集称为 \textbf{随机事件}，简称 \textbf{事件}.
 	
-	{每次试验中，当且仅当这一子集的一个样本点出现称为 \textbf{事件发生}.}
+	每次试验中，当且仅当这一子集的一个样本点出现称为 \textbf{事件发生}.
 	
-	{有一个样本点组成的单点集称为 \textbf{基本事件}.}
+	有一个样本点组成的单点集称为 \textbf{基本事件}.
 	
-	{样本空间S包含所有的样本点，它是S自身的子集，在每次试验中它总是发生的，S成为 \textbf{必然事件}.}
+	样本空间S包含所有的样本点，它是S自身的子集，在每次试验中它总是发生的，S成为 \textbf{必然事件}.
 	
-	{空集 $ \emptyset $ 不包含任何样本点，它也作为样本空间的子集，他在每次试验中都不发生， $ \emptyset $ 称为 \textbf{不可能事件}.}
+	空集 $ \emptyset $ 不包含任何样本点，它也作为样本空间的子集，他在每次试验中都不发生， $ \emptyset $ 称为 \textbf{不可能事件}.
 	
 	\subsubsection{事件间的关系与事件的运算}
 	
 	\begin{enumerate}
-		\item [1.] {若 $ A \subset B $ ，则称事件 $ B $ 包含事件 $ A $ ，这指的是事件 $ A $ 发生必导致事件 $ B $ 发生. \\ 
-					若 $ A \subset B $ 且 $ B \subset A $ ，即 $ A = B $ ，则称事件 $ A $ 与事件 $ B $  \textbf{相等}.}
-		\item [2.] {事件 $ A \cup B=\{x|x \in A 或 x \in B\} $ 称为事件 $ A $ 与事件 $ B $ 的 \textbf{和事件}.当且仅当 $ A,B $ 中至少一个发生时，事件 $ A \cup B $ 发生. \\ 
-					类似地，称 $ \bigcup\limits_{k=1}^{n}A_{k} $ 为 $ n $ 个事件 $ A_{1},A_{2}, \cdots ,A_{n} $ 的 \textbf{和事件}；称 $ \bigcup\limits_{k=1}^{\infty}A_{k} $ 为可列个事件 $ A_{1},A_{2}, \cdots $ 的和事件.}
-		\item [3.] {事件 $ A \cap B=\{x|x \in A 且 x \in B\} $ 称为事件 $ A $ 与事件 $ B $ 的 \textbf{积事件}.当且仅当 $ A,B $ 同时发生时，事件 $ A \cap B $ 发生. $ A \cap B $ 也记作 $ AB $ . \\ 
-					类似地，称 $ \bigcap\limits_{k=1}^{n}A_{k} $ 为 $ n $ 个事件 $ A_{1},A_{2}, \cdots ,A_{n} $ 的 \textbf{积事件}；称 $ \bigcap\limits_{k=1}^{\infty}A_{k} $ 为可列个事件 $ A_{1},A_{2}, \cdots $ 的积事件.}
-		\item [4.] {事件 $ A-B=\{x|x \in A 且 x \notin B\} $ 称为事件 $ A $ 与事件 $ B $ 的 \textbf{差事件}.当且仅当 $ A $ 发生、 $ B $ 不发生时事件 $ A-B $ 发生.}
-		\item [5.] {若 $ A \cap B= \emptyset $ 则称事件 $ A $ 与事件 $ B $ 是 \textbf{互不相容的}，或 \textbf{互斥的}.这指的是事件 $ A $ 与事件 $ B $ 不能同时发生.基本事件也是两两互不相容的.}
-		\item [6.] {若 $ A \cup B=S $ 且 $ A \cap B= \emptyset $ ，则称事件 $ A $ 与事件 $ B $ 互为 \textbf{逆事件}. 又称事件 $ A $ 与事件 $ B $ 互为 \textbf{对立事件}.这指的是对每次试验而言，事件 $ A,B $ 中必有一个发生，且仅有一个发生. $ A $ 的对立事件记为 $ \bar{A} $. $ \bar{A} =S-A $ }
+		\item [1.] 若 $ A \subset B $ ，则称事件 $ B $ 包含事件 $ A $ ，这指的是事件 $ A $ 发生必导致事件 $ B $ 发生. \\ 
+					若 $ A \subset B $ 且 $ B \subset A $ ，即 $ A = B $ ，则称事件 $ A $ 与事件 $ B $  \textbf{相等}.
+		\item [2.] 事件 $ A \cup B=\{x|x \in A 或 x \in B\} $ 称为事件 $ A $ 与事件 $ B $ 的 \textbf{和事件}.当且仅当 $ A,B $ 中至少一个发生时，事件 $ A \cup B $ 发生. \\ 
+					类似地，称 $ \bigcup\limits_{k=1}^{n}A_{k} $ 为 $ n $ 个事件 $ A_{1},A_{2}, \cdots ,A_{n} $ 的 \textbf{和事件}；称 $ \bigcup\limits_{k=1}^{\infty}A_{k} $ 为可列个事件 $ A_{1},A_{2}, \cdots $ 的和事件.
+		\item [3.] 事件 $ A \cap B=\{x|x \in A 且 x \in B\} $ 称为事件 $ A $ 与事件 $ B $ 的 \textbf{积事件}.当且仅当 $ A,B $ 同时发生时，事件 $ A \cap B $ 发生. $ A \cap B $ 也记作 $ AB $ . \\ 
+					类似地，称 $ \bigcap\limits_{k=1}^{n}A_{k} $ 为 $ n $ 个事件 $ A_{1},A_{2}, \cdots ,A_{n} $ 的 \textbf{积事件}；称 $ \bigcap\limits_{k=1}^{\infty}A_{k} $ 为可列个事件 $ A_{1},A_{2}, \cdots $ 的积事件.
+		\item [4.] 事件 $ A-B=\{x|x \in A 且 x \notin B\} $ 称为事件 $ A $ 与事件 $ B $ 的 \textbf{差事件}.当且仅当 $ A $ 发生、 $ B $ 不发生时事件 $ A-B $ 发生.
+		\item [5.] 若 $ A \cap B= \emptyset $ 则称事件 $ A $ 与事件 $ B $ 是 \textbf{互不相容的}，或 \textbf{互斥的}.这指的是事件 $ A $ 与事件 $ B $ 不能同时发生.基本事件也是两两互不相容的.
+		\item [6.] 若 $ A \cup B=S $ 且 $ A \cap B= \emptyset $ ，则称事件 $ A $ 与事件 $ B $ 互为 \textbf{逆事件}. 又称事件 $ A $ 与事件 $ B $ 互为 \textbf{对立事件}.这指的是对每次试验而言，事件 $ A,B $ 中必有一个发生，且仅有一个发生. $ A $ 的对立事件记为 $ \bar{A} $. $ \bar{A} =S-A $ 
 	\end{enumerate}
 
 	\begin{itemize}
-		\item [交换律:] { $ A \cup B=B \cup A $ ; \\ $  A \cap B=B \cap A  $ .}
-		\item [结合律:] { $ A \cup (B \cup C)=(A \cup B) \cup C $ ; \\ $  A \cap (B \cap C)=(A \cap B) \cap C $ .}
-		\item [分配律:] { $ A \cup (B \cap C)=(A \cup B) \cap (A \cup C) $ ; \\ $ A \cap (B \cup C)=(A \cap B) \cup (A \cap C) $ .}
-		\item [德摩根律:] { $ \bar{A \cup B} = \bar{A} \cap \bar{B} $ ; $ \bar{A \cap B} = \bar{A} \cup \bar{B} $ .}
+		\item [交换律:] $ A \cup B=B \cup A $ ; \\ $  A \cap B=B \cap A  $ .
+		\item [结合律:] $ A \cup (B \cup C)=(A \cup B) \cup C $ ; \\ $  A \cap (B \cap C)=(A \cap B) \cap C $ .
+		\item [分配律:] $ A \cup (B \cap C)=(A \cup B) \cap (A \cup C) $ ; \\ $ A \cap (B \cup C)=(A \cap B) \cup (A \cap C) $ .
+		\item [德摩根律:] $ \bar{A \cup B} = \bar{A} \cap \bar{B} $ ; $ \bar{A \cap B} = \bar{A} \cup \bar{B} $ .
 	\end{itemize}
 	
 	\subsection{频率与概率}
 	
 	\subsubsection{频率}
 	
-	{在相同条件下，进行了 $ n $ 次试验，在这 $ n $ 次试验中，事件 $ A $ 发生的次数为 $ n_{A} $ 称为事件 $ A $ 发生的 \textbf{频数}.比值 $ \frac{n_{A}}{n} $ 称为事件 $ A $ 发生的 \textbf{频率}，并记成 $ f_{n}(A) $ }
+	在相同条件下，进行了 $ n $ 次试验，在这 $ n $ 次试验中，事件 $ A $ 发生的次数为 $ n_{A} $ 称为事件 $ A $ 发生的 \textbf{频数}.比值 $ \frac{n_{A}}{n} $ 称为事件 $ A $ 发生的 \textbf{频率}，并记成 $ f_{n}(A) $ 
 	
 	\begin{itemize}
 		\item [性质:] {
 			\begin{enumerate}
-				\item [1.] { $ 0 \le f_{n}(A) \le 1 $ ;}
-				\item [2.] { $ f_{n}(S)=1 $ ;}
-				\item [3.] { 若 $A_{1},A_{2}, \cdots ,A_{k} $ 是两两互不相容的事件，则 $ f_{n}(A_{1} \cup A_{2} \cup \cdots \cup A_{k})=f_{n}(A_{1})+f_{n}(A_{2})+ \cdots +f_{n}(A_{k}) $ .}
+				\item [1.] $ 0 \le f_{n}(A) \le 1 $ ;
+				\item [2.] $ f_{n}(S)=1 $ ;
+				\item [3.] 若 $A_{1},A_{2}, \cdots ,A_{k} $ 是两两互不相容的事件，则 $$ f_{n}(A_{1} \cup A_{2} \cup \cdots \cup A_{k})=f_{n}(A_{1})+f_{n}(A_{2})+ \cdots +f_{n}(A_{k}). $$ 
 			\end{enumerate}
 		}
 	\end{itemize}
 
 	\subsubsection{概率}
 	
-	{设 $ E $ 是随机试验， $ S $ 是它的样本空间.对于 $ E $ 的每一事件 $ A $ 赋予一个实数，记为 $ P(A) $ ，称为事件 $ A $ 的 \textbf{概率}，如果集合函数 $ P( \cdot ) $ 满足以下条件:}
+	设 $ E $ 是随机试验， $ S $ 是它的样本空间.对于 $ E $ 的每一事件 $ A $ 赋予一个实数，记为 $ P(A) $ ，称为事件 $ A $ 的 \textbf{概率}，如果集合函数 $ P( \cdot ) $ 满足以下条件:
 	
 	\begin{enumerate}
-		\item [1.] { \textbf{非负性:} 对于每一个事件 $ A $ ，有 $ P(A) \ge 0 $ ;}
-		\item [2.] { \textbf{规范性:} 对于必然事件 $ S $ ，有 $ P(S)=1 $ ;}
-		\item [3.] { \textbf{可列可加性:} 设 $ A_{1},A_{2}, \cdots $ 是两两互不相容的事件，即对于 $ A_{i}A_{j}= \emptyset $ ， $ i \neq ,i,j=1,2, \cdots , $ 有 $ P(A_{1} \cup A_{2} \cup \cdots)=P(A_{1})+P(A_{2})+ \cdots $ .}
+		\item [1.] \textbf{非负性:} 对于每一个事件 $ A $ ，有 $ P(A) \ge 0 $ ;
+		\item [2.] \textbf{规范性:} 对于必然事件 $ S $ ，有 $ P(S)=1 $ ;
+		\item [3.] \textbf{可列可加性:} 设 $ A_{1},A_{2}, \cdots $ 是两两互不相容的事件，即对于 $ A_{i}A_{j}= \emptyset $ ， $ i \neq ,i,j=1,2, \cdots , $ 有 $$ P(A_{1} \cup A_{2} \cup \cdots)=P(A_{1})+P(A_{2})+ \cdots . $$ 
 	\end{enumerate}
 
 	\begin{itemize}
 		\item [性质:] {
 			\begin{enumerate}
-				\item [1.] { $ P( \emptyset )=0 $ .}
-				\item [2.] {若 $ A_{1},A_{2}, \cdots ,A_{n} $ 是两两互不相容的事件，则有 $ P(A_{1} \cup A_{2} \cup \cdots \cup A_{n})=P(A_{1})+P(A_{2})+ \cdots +P(A_{n}) $ .}
-				\item [3.] {设 $ A,B $ 是两个事件，若 $A \subset B$ ，则有 $ P(B-A)=P(B)-P(A) $ ; $ P(B) \ge P(A) $ .}
-				\item [4.] {对于任一事件 $ A $ ， $ P(A) \le 1 $ .}
-				\item [5.] {对于任意两事件 $ A,B $ 有 $ P(A \cup B)=P(A)+P(B)-P(AB) $ .}
+				\item [1.]  $ P( \emptyset )=0 $ .
+				\item [2.] 若 $ A_{1},A_{2}, \cdots ,A_{n} $ 是两两互不相容的事件，则有 $$ P(A_{1} \cup A_{2} \cup \cdots \cup A_{n})=P(A_{1})+P(A_{2})+ \cdots +P(A_{n}). $$ 
+				\item [3.] 设 $ A,B $ 是两个事件，若 $ A \subset B $ ，则有 $$ P(B-A)=P(B)-P(A); $$ $$ P(B) \ge P(A). $$ 
+				\item [4.] 对于任一事件 $ A $ ，有 $$ P(A) \le 1. $$ 
+				\item [5.] 对于任意两事件 $ A,B $ 有 $$ P(A \cup B)=P(A)+P(B)-P(AB). $$ 
 			\end{enumerate}
 		}
 	\end{itemize}
@@ -112,58 +114,124 @@
 		\item [2.] {试验中每个基本事件发生的可能性相同.}
 	\end{enumerate}
 
-	{具有以上两个特点的试验称为 \textbf{等可能概型}.它在概率论发展初期曾是主要的研究对象，所以也成为 \textbf{古典概型}.}
+	具有以上两个特点的试验称为 \textbf{等可能概型}.它在概率论发展初期曾是主要的研究对象，所以也成为 \textbf{古典概型}.
 	
-	{设试验的样本空间为 $ S=\{e_{1},e_{2}, \cdots ,e_{n}\}$ 若 $ A $ 包含 $ k $ 个基本事件则有: \\ $$ P(A)=\sum\limits_{j=1}^{k}P(\{e_{i_{j}}\})= \frac{k}{n} = \frac{A \mbox{包含的基本事件数} }{S \mbox{中基本事件的总数} } $$ }
+	设试验的样本空间为 $ S=\{e_{1},e_{2}, \cdots ,e_{n}\}$ 若 $ A $ 包含 $ k $ 个基本事件则有: \\ $$ P(A)=\sum\limits_{j=1}^{k}P(\{e_{i_{j}}\})= \frac{k}{n} = \frac{A \mbox{包含的基本事件数} }{S \mbox{中基本事件的总数} }. $$ 
 	
-	{ \textbf{超几何分布}的概率公式: $$ p= \frac{ \binom{D}{k} \binom{N-D}{n-k} }{ \binom{N}{n} } $$ }
+	\textbf{超几何分布}的概率公式: $$ p= \frac{ \binom{D}{k} \binom{N-D}{n-k} }{ \binom{N}{n} }. $$ 
 	
 	\subsection{条件概率}
 	
 	\subsubsection{条件概率}
 	
-	{设 $ A,B $ 是两个事件，且 $ P(A)>0 $ ，称 $ P(B|A)= \frac{P(AB)}{P(A)} $ 为在事件 $ A $ 发生下事件 $ B $ 发生的 \textbf{条件概率}.}
+	设 $ A,B $ 是两个事件，且 $ P(A)>0 $ ，称 $$ P(B|A)= \frac{P(AB)}{P(A)} $$ 为在事件 $ A $ 发生下事件 $ B $ 发生的 \textbf{条件概率}.
 	
 	\subsubsection{乘法定理}
 	
-	{设 $ P(A)>0 $ 则有 $ P(AB)=P(B|A)P(A) $ .}
+	设 $ P(A)>0 $ 则有 $$ P(AB)=P(B|A)P(A). $$ 
 	
 	\subsubsection{全概率公式和贝叶斯公式}
 	
-	{\textbf{全概率公式:} 设试验 $ E $ 的样本空间为 $ S $ ， $ A $ 为 $ E $ 的事件， $ B_{1},B_{2}, \cdots ,B_{n} $ 为 $ S $ 的一个划分，且 $ P(B_{i})>0(i=1,2, \cdots ,n) $ ，则: $$ P(A)=P(A|B_{1})P(B_{1})+P(A|B_{2})P(B_{2})+ \cdots +P(A|B_{n})P(B_{n}) $$ }
+	\textbf{全概率公式:} 设试验 $ E $ 的样本空间为 $ S $ ， $ A $ 为 $ E $ 的事件， $ B_{1},B_{2}, \cdots ,B_{n} $ 为 $ S $ 的一个划分，且 $ P(B_{i})>0(i=1,2, \cdots ,n) $ ，则 $$ P(A)=P(A|B_{1})P(B_{1})+P(A|B_{2})P(B_{2})+ \cdots +P(A|B_{n})P(B_{n}). $$ 
 	
-	{\textbf{贝叶斯( $ \texttt{Bayes} $ )公式:} 设试验 $ E $ 的样本空间为 $ S $ ， $ A $ 为 $ E $ 的事件， $ B_{1},B_{2}, \cdots ,B_{n} $ 为 $ S $ 的一个划分，且 $ P(A)>0,P(B_{i})>0(i=1,2, \cdots ,n) $ ，则: $$ P(B_{i}|A)= \frac{P(A|B_{i})P(B_{i})}{\sum\limits_{j=1}^{n}P(A|B_{j})P(B_{j})},\ \ i=1,2, \cdots ,n $$ }
+	\textbf{贝叶斯( $ \texttt{Bayes} $ )公式:} 设试验 $ E $ 的样本空间为 $ S $ ， $ A $ 为 $ E $ 的事件， $ B_{1},B_{2}, \cdots ,B_{n} $ 为 $ S $ 的一个划分，且 $ P(A)>0,P(B_{i})>0(i=1,2, \cdots ,n) $ ，则 $$ P(B_{i}|A)= \frac{P(A|B_{i})P(B_{i})}{\sum\limits_{j=1}^{n}P(A|B_{j})P(B_{j})},\ \ i=1,2, \cdots ,n. $$ 
 	
 	\subsection{独立性}
 	
-	{设 $ A,B $ 两事件如果满足等式 $ P(AB)=P(A)P(B) $ 则称事件 $ A,B $ \textbf{相互独立}，简称 $ A,B $ \textbf{独立}.}
+	设 $ A,B $ 两事件如果满足等式 $$ P(AB)=P(A)P(B) $$ 则称事件 $ A,B $ \textbf{相互独立}，简称 $ A,B $ \textbf{独立}.
 	
 	\begin{itemize}
 		\item [定理:] {
 			\begin{enumerate}
-				\item [1.] {设 $ A,B $ 是两事件，且 $ P(A)>0 $ .若 $ A,B $ 相互独立，则 $ P(B|A)=P(B) $.反之亦然.}
-				\item [2.] {若事件 $ A $ 与 $ B $ 相互独立，则下列各对事件也相互独立: $ A $ 与 $ \bar{B} $ ， $ \bar{A} $ 与 $ B $ ， $ \bar{A} $ 与 $ \bar{B} $ .}
+				\item [1.] 设 $ A,B $ 是两事件，且 $ P(A)>0 $ .若 $ A,B $ 相互独立，则 $ P(B|A)=P(B) $.反之亦然.
+				\item [2.] 若事件 $ A $ 与 $ B $ 相互独立，则下列各对事件也相互独立: $ A $ 与 $ \bar{B} $ ， $ \bar{A} $ 与 $ B $ ， $ \bar{A} $ 与 $ \bar{B} $ .
 			\end{enumerate}
 		}
 	\end{itemize}
 	
-	{一般，设 $ A_{1},A_{2}, \cdots ,A_{n} $ 是 $ n(n \ge 2) $ 个事件，如果对于其中任意 $ 2 $ 个，任意 $ 3 $ 个， $ \cdots $ ，任意 $ n $ 个事件的积事件的概率，都等于各事件概率之积，则称事件 $ A_{1},A_{2}, \cdots ,A_{n} $ 相互独立.}
+	一般，设 $ A_{1},A_{2}, \cdots ,A_{n} $ 是 $ n(n \ge 2) $ 个事件，如果对于其中任意 $ 2 $ 个，任意 $ 3 $ 个， $ \cdots $ ，任意 $ n $ 个事件的积事件的概率，都等于各事件概率之积，则称事件 $ A_{1},A_{2}, \cdots ,A_{n} $ 相互独立.
 	
 	\begin{itemize}
 		\item [推论:] {
 			\begin{enumerate}
-				\item [1.] {若事件 $ A_{1},A_{2}, \cdots ,A_{n}(n \ge 2) $ 相互独立，则其中任意 $ k(2 \le k \le n) $ 个事件也是相互独立的.}
-				\item [2.] {若 $ n $ 个事件 $ A_{1},A_{2}, \cdots ,A_{n}(n \ge 2) $ 相互独立，则将 $ A_{1},A_{2}, \cdots ,A_{n} $ 中任意多个事件换成它们各自的对立事件，所得的 $ n $ 个事件仍相互独立.}
+				\item [1.] 若事件 $ A_{1},A_{2}, \cdots ,A_{n}(n \ge 2) $ 相互独立，则其中任意 $ k(2 \le k \le n) $ 个事件也是相互独立的.
+				\item [2.] 若 $ n $ 个事件 $ A_{1},A_{2}, \cdots ,A_{n}(n \ge 2) $ 相互独立，则将 $ A_{1},A_{2}, \cdots ,A_{n} $ 中任意多个事件换成它们各自的对立事件，所得的 $ n $ 个事件仍相互独立.
 			\end{enumerate}
 		}
 	\end{itemize}
 	
 	\section{第二章\ 随机变量及其分布}
+	
 	\subsection{随机变量}
+	
+	设随机试验的样本空间为 $ S=\{e\} $ . $ X=X(e) $ 是定义在样本空间上的单值函数.称 $ X=X(e) $ 为 \textbf{随机变量}
+	
 	\subsection{离散型随机变量及其分布率}
+	
+	\subsubsection{(0-1)分布}
+	
+	设随机变量 $ X $ 只可能取 $ 0 $ 与 $ 1 $ 两个值，它的分布律是 $$ P\{X=k\}=p^{k}(1-p)^{1-k},k=0,1\ \ (0<p<1) $$ 则称 $ X $ 服从以 $ p $ 为参数的 $ (0-1) $ \textbf{分布}或 \textbf{两点分布}
+	
+	\subsubsection{伯努利试验、二项分布}
+	
+	设试验 $ E $ 只有两个可能结果： $ A $ 及 $ \bar{A} $ ，则称 $ E $ 为 \textbf{伯努利} $ \texttt{(Bernoulli)} $ \textbf{试验}.
+	
+	将 $ E $ 独立重复地进行 $ n $ 次，则称这一串重复的独立试验为 $ n $ \textbf{重伯努利试验}.
+	
+	以 $ X $ 表示 $ n $ 重伯努利试验中事件 $ A $ 发生的次数，每次伯努利试验中 $ A $ 事件发生的概率为 $ p $ 称随机变量 $ X $ 服从参数为 $ n,p $ 的 \textbf{二项分布}，并记为 $ X \sim b(n,p)$ .它的分布律是 $$ P\{x=k\}=\binom{n}{k}p^{k}(1-p)^{n-k},k=0,1,2, \cdots ,n $$ 
+	
+	\subsubsection{泊松分布}
+	
+	设随机变量 $ X $ 的所有可能取的值为 $0,1,2, \cdots,$ 而取各个值的概率为 $$ P\{X=k\}= \frac{ \lambda ^{k}e^{- \lambda } }{k!},k=0,1,2 \cdots , $$ 其中 $ \lambda >0$ 是常数.则称 $ X $ 服从参数为 $ \lambda $ 的 \textbf{泊松分布}，记为 $ X \sim \pi( \lambda ) $ 
+	
+	\textbf{泊松定理:} 设 $ \lambda >0 $ 是一个常数， $ n $ 是任意正整数，设 $ np_{n}= \lambda $ ，则对于任意固定的非负整数 $ k $ 有 $$ \lim\limits_{n \to \infty}p_{n}^{k}(1-p_{n})^{n-k}= \frac{ \lambda ^{k}e^{- \lambda }}{k!} $$ 
+	
+	一般，当 $ n \ge 20,p \le 0.05 $ 时用 $ \frac{ \lambda ^{k}e^{- \lambda }}{k!}( \lambda =np) $ 作为 $ \binom{n}{k} p^{k}(1-p)^{n-k} $ 的近似值效果颇佳.
+	
 	\subsection{随机变量的分布函数}
+	
+	设 $ X $ 是一个随机变量， $ x $ 是任意实数，函数 $$ F(x)=P\{X \le x\},- \infty <x< \infty $$ 称为 $ X $ 的 \textbf{分布函数}.
+	
 	\subsection{连续型随机变量及其概率密度}
+	
+	如果对于随机变量 $ X $ 的分布函数 $ F(x) $ ，存在非负可积函数 $ f(x) $，使对于任意实数 $ x $ 有 $$ F(x)= \int_{- \infty }^{x}f(t) {\rm d}t $$ 则称 $ X $ 为 \textbf{连续型随机变量}，其中函数 $ f(x) $ 称为 $ X $ 的 \textbf{概率密度函数}，简称 \textbf{概率密度}.
+	
+	\subsubsection{均匀分布}
+	
+	若连续型随机变量 $ X $ 具有概率密度 $$ f(x)= \begin{cases} \frac{1}{b-a}, & a<x<b,\\ 0, & \mbox{其他},\\ \end{cases} $$ 
+	则称 $ X $ 在区间 $ (a,b) $ 上服从 \textbf{均匀分布}.记为 $ X \sim U(a,b) $
+	
+	\subsubsection{指数分布}
+	
+	若连续型随机变量 $ X $ 的概率密度为 $$ f(x)= \begin{cases} \frac{1}{ \theta } e^{- \frac{x}{ \theta } }, & x>0,\\ 0, & \mbox{其他},\\ \end{cases} $$ 
+	其中 $ \theta >0 $ 为常数，则称 $ X $ 服从参数为 $ \theta $ 的 \textbf{指数分布}.
+	
+	\subsubsection{正态分布}
+	
+	若连续型随机变量 $ X $ 的概率密度为 $$ f(x)= \frac{1}{ \sqrt{2 \pi } \sigma } e^{- \frac{(x- \mu )^{2}}{2 \sigma ^{2}} }, - \infty <x< \infty $$ 其中 $ \mu , \sigma ( \sigma >0) $ 为常数，则称 $ X $ 服从参数为 $ \mu , \sigma $ 的 \textbf{正态分布} 或 \textbf{高斯} $ \texttt{(Gauss)} $ 分布，记为 $ X \sim N( \mu , \sigma ^{2}) $ .
+	
+	\begin{itemize}
+		\item [性质:] {
+			\begin{enumerate}
+				\item [1.] 曲线关于 $ x= \mu $ 对称.这表明对于任意 $ h>0 $ 有 $$ P\{ \mu -h<X \le \mu \}=P\{ \mu < X \le \mu +h\}. $$
+				\item [2.] 当 $ x= \mu $ 时取到最大值 $$ F( \mu )= \frac{1}{ \sqrt{2 \pi } \sigma }. $$
+			\end{enumerate}
+		}
+	\end{itemize}
+
+	特别，当 $ \mu =0, \sigma =1 $ 时称随机变量 $ X $ 服从 \textbf{标准正态分布}. 其概率密度和分布函数分别用 $ \varphi(x) , \Phi(x) $ 表示，即有 $$ \varphi(x) =\ \frac{1}{ \sqrt{2 \pi } \sigma } e^{- \frac{x^{2}}{2}}, $$ $$ \Phi(x) = \frac{1}{ \sqrt{2 \pi }} \int_{- \infty }^{x} e^{- \frac{t^{2}}{2}} {\rm d} t. $$
+	易知 $$ \Phi(-x) =1- \Phi(x). $$
+
+	\begin{itemize}
+		\item [引理:] {
+			若 $ X \sim N( \mu , \sigma ^{2}) $ ，则 $ Z= \frac{X- \mu }{ \sigma } \sim N(0,1) $ .
+		}
+	\end{itemize}
+	
 	\subsection{随机变量的函数的分布}
+	
+	设随机变量 $ X $ 具有概率密度 $ f_X(x),- \infty <x< \infty $ ，又设函数 $ g(x) $ 处处可导且恒有 $ g'(x)>0 $ （或恒有 $ g'(x)<0 $ ）.则 $ Y=g(X) $ 是连续型随机变量，其概率密度为 $$ f_{Y}(y)= \begin{cases} f_{X}[h(y)]|h'(y)|, & \alpha <y< \beta, \\ 0, & \mbox{其他},\\ \end{cases} $$ 其中 $ \alpha = \min\{g(- \infty ),g( \infty )\}, \beta = \max\{g(- \infty ),g( \infty )\} $ ， $ h(y) $ 是 $ g(x) $ 的反函数.
+	
 	\section{第三章\ 多维随机变量及其分布}
 	\subsection{二维随机变量}
 	\subsection{边缘分布}
