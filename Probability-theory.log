@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2019.6.2)  7 JUN 2019 15:22
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2019.6.2)  7 JUN 2019 20:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1403,7 +1403,8 @@ LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
 . - 'normal' (m/n) with NFSS spec.: <->"[FandolFang-Regular.otf]/OT"
 . - 'small caps'  (m/sc) with NFSS spec.: 
 .................................................
-[6] [7] [8] [9] [10] [11] [12] [13] [14] (./Probability-theory.aux) ) 
+[6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18]
+(./Probability-theory.aux) ) 
 Here is how much of TeX's memory you used:
  21281 strings out of 493007
  451723 string characters out of 6136720
@@ -1413,4 +1414,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  57i,8n,76p,10424b,364s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Probability-theory.pdf (14 pages).
+Output written on Probability-theory.pdf (18 pages).
