@@ -254,7 +254,7 @@
 	对于二维随机变量 $ (X,Y) $ 的分布函数 $ F(x,y) $ ，如果存在非负可积函数 $ f(x,y) $ ，使对于任意 $ x,y $ 有 $$ F(x,y)= \int_{- \infty }^{ y } \int_{- \infty }^{ x } f(u,v){\rm d}u{\rm d}v, $$ 则称 $ (X,y) $ 是 \textbf{连续型的二维随机变量}，函数 $ f(x,y) $ 称为二维随机变量 $ (X,Y) $ 的 \textbf{概率密度}，或称为随机变量 $ X $ 和 $ Y $ 的 \textbf{联合概率密度}.
 	
 	\begin{itemize}
-		\item [概率密度 $ f(x,y) $ 具有以下性质:] {
+		\item [性质:] {
 			\begin{enumerate}
 				\item [1.] $ f(x,y) \ge 0 $
 				\item [2.] $ \int_{- \infty }^{ \infty } \int_{- \infty }^{ \infty }{\rm d}x{\rm y}=F( \infty , \infty )=1. $
@@ -269,9 +269,28 @@
 	对于任意 $ n $ 个实验 $ x_{1},x_{2}, \cdots ,x_{n},n $ 元函数 $$ F(x_{1},x_{2}, \cdots ,x_{n})=P\{X_{1} \le x_{1},X_{2} \le x_{2}, \cdots ,X_{n} \le x_{n} \} $$ 称为 $ n $ 维随机变量 $ (X_{1},X_{2}, \cdots ,X_{n}) $ 的 \textbf{分布函数}，或随机变量 $ X_{1},X_{2}, \cdots ,X_{n} $ 的 \textbf{联合分布函数}.
 	
 	\subsection{边缘分布}
+	
+	二维随机变量 $ (X,Y) $ 作为一个整体，具有分布函数 $ F(x,y) $ .而 $ X $ 和 $ Y $ 都是随机变量，各自也有分布函数，将它们分别记为 $ F_{X}(x),F_{Y}(y) $ ，依次称为二维随机变量 $ (X,Y) $ 关于 $ X $ 和关于 $ Y $ 的 \textbf{边缘分布函数}.
+	
+	对于离散型随机变量可得 $$ F_{X}(x)=F(x, \infty )=\sum\limits_{x_{i} \le x}\sum\limits_{j=1}p_{ij} $$ $ X $ 的分布律为 $$ P\{X=x_{i}\}=\sum\limits_{j=1 }^{ \infty }p_{ij},\ \ i=1,2, \cdots . $$ 同样 $ Y $ 的分布律为 $$ P\{Y=y_{i}\}=\sum\limits_{i=1}^{ \infty }p_{ij},\ \ j=1,2, \cdots . $$ 记 $$ p_{i \cdot }=\sum\limits_{j=1}^{ \infty }p_{ij}=P\{X=x_{i}\},\ \ i=1,2, \cdots , $$ $$ p_{ \cdot j}=\sum\limits_{i=1}^{ \infty }p_{ij}=P\{Y=y_{j}\},\ \ j=1,2, \cdots , $$ 分别称 $ p_{i \cdot }(i=1,2, \cdots ) $ 和 $ p_{ \cdot j}(j=1,2, \cdots ) $ 为 $ (X,Y) $ 关于 $ X $ 和关于 $ Y $ 的 \textbf{边缘分布律}.
+	
+	对于连续型随机变量 $ (X,Y) $ 设它的概率密度为 $ f(x,y) $ ，由于 $$ F_{X}(x)=F(x, \infty )= \int_{- \infty }^{x}[ \int_{- \infty }^{ \infty }f(x,y){\rm d}y ]{\rm d}x, $$ $ X $ 是一个连续型随机变量，其概率密度为 $$ f_{X}(x)= \int_{- \infty }^{ \infty }f(x,y){\rm d}y. $$ 同样， $ Y $ 也是一个连续型随机变量，其概率密度为 $$ f_{Y}(y)= \int_{- \infty }^{ \infty }f(x,y){\rm d}x. $$ 分别称 $ f_X(x) $ ， $ f_{Y}(y) $ 为 $ (X,Y) $ 关于 $ X $ 和关于 $ Y $ 的 \textbf{边缘概率密度}.
+	
 	\subsection{条件分布}
+	
+	设 $ (X,Y) $ 是二位离散型随机变量，对于固定的 $ j $ ，若 $ P\{Y=y_{i}\}>0 $ ，则称 $$ P\{X=x_{i}|Y=y_{j}\}= \frac{P\{X=x_{i},Y=y_{j}\}}{P\{Y=y_{j}\}}= \frac{p_{ij}}{p_{ \cdot j}},\ \ i=1,2, \cdots $$ 为在 $ Y=y_{j} $ 条件下随机变量 $ X $ 的 \textbf{条件分布律}. \\ 
+	同样，对于固定的 $ i $ ，若 $ P\{X=x_{i}\}>0 $ ，则称 $$ P\{Y=y_{i}|X=x_{i}\}= \frac{P\{X=x_{i},Y=y_{j}\}}{P\{X=x_{i}\}}= \frac{p_{ij}}{p_{i \cdot }},\ \ j=1,2, \cdots $$ 为在 $ X=x_{i} $ 条件下随机变量 $ Y $ 的 \textbf{条件分布律}.
+	
+	设二维随机变量 $ (X,Y) $ 的概率密度为 $ f(x,y),(X,Y) $ 关于 $ Y $ 的边缘概率密度为 $ f_{Y}(y) $ .若对于固定的 $ y $ ， $ f_{Y}(y)>0 $ ，则称 $ \frac{f(x,y)}{f_{Y}(y)} $ 为在 $ Y=y $ 的条件下 $ X $ 的 \textbf{条件概率密度}，记为 $$ f_{X|Y}(x|y)= \frac{f(x,y)}{f_{Y}(y)}, $$ 类似地，可以定义 $$ f_{Y|X}(y|x)= \frac{f(x,y)}{f_{X}(x)}. $$
+	
 	\subsection{相互独立的随机变量}
-	\subsection{两个随机变量的函数的分布}
+	
+	设 $ F(x,y) $ 及 $ F_{X}(x),F_{Y}(y) $ 分别是二维随机变量 $ (X,Y) $ 的分布函数及边缘分布函数.若对于所有 $ x,y $ 有 $$ P\{X \le x,Y \le y\}=P\{X \le x\}P\{Y \le y\}, $$ 即 $$ F(x,y)=F_{X}(x)F_{Y}(y), $$ 则称随机变量 $ X $ 和 $ Y $ 是相互独立的.
+	
+	\begin{itemize}
+		\item [定理:] 设 $ (X_{1},X_{2}, \cdots ,X_{n}) $ 和 $ (Y_{1},Y_{2}, \cdots Y_{n}) $ 相互独立，则 $ X_{i}(i=1,2, \cdots ,m) $ 和 $ Y_{j}(j=1,2, \cdots ,n) $ 相互独立.又若 $ h,g $ 是连续函数，则 $ g(X_{1},X_{2}, \cdots , X_{m}) $ 和 $ g(Y_{1}, Y_{2}, \cdots ,Y_{n}) $ 相互独立.
+	\end{itemize}
+	
 	\section{第四章\ 随机变量的数字特征}
 	\subsection{数学期望}
 	\subsection{方差}
