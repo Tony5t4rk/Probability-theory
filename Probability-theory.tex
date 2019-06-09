@@ -369,7 +369,25 @@
 	
 	\subsection{大数定律}
 	
+	\textbf{弱大数定理（辛钦大数定理）:} 设 $ X_{1},X_{2}, \cdots $ 是相互独立，服从同一分布的随机变量序列，且具有数学期望 $ E(X_{k})= \mu (k=1,2, \cdots ) $.作前 $ n $ 个变量的算术平均 $ \frac{1}{n} \sum\limits_{k=1}^{n}X_{k} $ .则对于任意 $ \epsilon >0 $ ，有 $$ \lim\limits_{n \to \infty }P\{| \frac{1}{n} \sum\limits_{k=1}^{n}X_{k} - \mu |< \epsilon \}=1. $$
+	
+	设 $ Y_{1},Y_{2}, \cdots ,Y_{n}, \cdots $ 是一个随机变量序列，$ a $ 是一个常数.若对于任意正数 $ \epsilon $ ，有 $$ \lim\limits_{n \to \infty }P\{|Y_{n}-a|< \epsilon \}=1, $$ 则称序列 $ Y_{1},Y_{2}, \cdots ,Y_{n}, \cdots $ \textbf{依概率收敛于 $ a $ }，记为 $$ Y_{n} \xrightarrow{P} a. $$
+	
+	\begin{itemize}
+		\item [性质:] 设 $ X_{n} \xrightarrow{P} a, Y_{n} \xrightarrow{P} b, $ 又设函数 $ g(x,y) $ 在点 $ (a,b) $ 连续，则 $$ g(X_{n},Y_{n}) \xrightarrow{P} g(a,b). $$
+	\end{itemize}
+	
+	\textbf{弱大数定理（辛钦大数定理）又可叙述为:} 设随机变量 $ X_{1},X_{2}, \cdots $ 相互独立，服从同一分布，且具有数学期望 $ E(X_{k})= \mu (k=1,2, \cdots ) $.则序列 $ \bar{X}= \frac{1}{n}\sum\limits_{k=1}^{n}X_{k} $ 依概率收敛于 $ \mu $ ，即 $ \bar{X} \xrightarrow{P} \mu $ .
+	
+	\textbf{伯努利大数定理:} 设 $ f_{A} $ 是 $ n $ 次独立重复试验中事件 $ A $ 发生的次数, $ p $ 是事件 $ A $ 在每次试验中发生的概率，则对任意正数 $ \epsilon>0 $ ，有 $$ \lim\limits_{n \to \infty }P\{| \frac{f_{A}}{n}-p |< \epsilon \}=1 $$ 或 $$ \lim\limits_{n \to \infty }P\{| \frac{f_{A}}{n}-p | \ge \epsilon \}=0. $$
+	
 	\subsection{中心极限定理}
+	
+	\textbf{独立同分布的中心极限定理:} 设随机变量 $ X_{1},X_{2}, \cdots ,X_{n}, \cdots $ 相互独立，服从同一分布，且具有数学期望和方差 $ E(X_{k})= \mu,D(X_{k})= \sigma ^{2}>0(k=1,2, \cdots ) $ ，则随机变量之和 $ \sum\limits_{k=1}^{n}X_{k} $ 的标准化变量 $$ Y_n= \frac{ \sum\limits_{k=1}^{n}X_{k}-E( \sum\limits_{k=1}^{n}X_{k} ) }{ \sqrt{D( \sum\limits_{j=1}^{n}X_{k} )} } = \frac{ \sum\limits_{k=1}^{n}X_{k}-n \mu }{ \sqrt{n} \sigma } $$ 的分布函数 $ F_{n}(x) $ 对于任意 $ x $ 满足 $$ \begin{aligned} \lim\limits_{n \to \infty }F_{n}(x) & = \lim\limits_{n \to \infty }P\{ \frac{ \sum\limits_{k=1}^{n}X_{k}-n \mu }{ \sqrt{n} \sigma } \le x \} \\ & = \int_{- \infty }^{x} \frac{1}{ \sqrt{2 \pi }e^{- \frac{t^{2}}{2}}{\rm d}t } = \Phi(x). \end{aligned} $$
+	
+	\textbf{李雅普诺夫 $ ( \texttt{Lyapunov} ) $ 定理:} 设随机变量 $ X_{1},X_{2}, \cdots ,X_{n}, \cdots $ 相互独立，它们具有数学期望和方差 $$ E(X_{k})= \mu _{k},\ \ D(X_{k})= \sigma _{k}^{2}>0,\ \ k=1,2, \cdots , $$ 记 $$ B_{n}^{2}= \sum\limits_{k=1}^{k} \sigma _{k}^{2}. $$ 若存在正数 $ \delta $ ，使得当 $ n \to \infty $ 时, $$ \frac{1}{B_{n}^{2+ \delta }} \sum\limits_{k=1}^{n}E\{|X_{k}- \mu _{k}|^{2+ \sigma }\} \to 0, $$ 则随机变量之和 $ \sum\limits_{k=1}^{n}X_{k} $ 的标准化变量 $$ Z_{n}= \frac{ \sum\limits_{k=1}^{n}X_{k}-E( \sum\limits_{k=1}^{n}X_{k} ) }{ \sqrt{D( \sum\limits_{k=1}^{n}X_{k} )} } = \frac{ \sum\limits_{k=1}^{n}X_{k} - \sum\limits_{k=1}^{n} \mu _{k} }{B_{n}} $$ 的分布函数 $ F_{n}(x) $ 对于任意 $ x $ 满足 $$ \begin{aligned} \lim\limits_{n \to \infty }F_{n}(x) & = \lim\limits_{n \to \infty } P\{ \frac{ \sum\limits_{k=1}^{n} X_{k} - \sum\limits_{k=1}^{n} \mu _{k} }{B_{n}} \le x \} \\ & = \int_{- \infty }^{x} \frac{1}{ \sqrt{2 \pi } } e^{- \frac{t^{2}}{2} } {\rm d}t = \Phi(x). \end{aligned} $$
+	
+	\textbf{棣莫弗-拉普拉斯 $ ( \texttt{De Moivre-Laplace} ) $ 定理:} 设随机变量 $ \eta _{n}(n=1,2, \cdots ) $ 服从参数为 $ n,p(0<p<1) $ 的二项分布，则对于任意 $ x $ ，有 $$ \lim\limits_{n \to \infty } P\{ \frac{ \eta _{n}-np}{ \sqrt{np(1-p)} } \le x \}= \int_{- \infty }^{x} \frac{1}{ \sqrt{2 \pi } } e^{- \frac{t^{2}}{2} }{\rm d}t= \Phi(x). $$
 	
 	\section{第六章\ 样本及抽样分布}
 	
