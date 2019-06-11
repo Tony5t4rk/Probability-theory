@@ -45,11 +45,13 @@
 \contentsline {subsubsection}{\numberline {6.2.2} $ t $ 分布}{20}
 \contentsline {subsubsection}{\numberline {6.2.3} $ F $ 分布}{21}
 \contentsline {subsubsection}{\numberline {6.2.4}正态总体的样本均值与样本方差的分布}{21}
-\contentsline {section}{\numberline {7}第七章\ 参数估计}{23}
-\contentsline {subsection}{\numberline {7.1}点估计}{23}
-\contentsline {subsection}{\numberline {7.2}基于截尾样本的最大似然估计}{23}
-\contentsline {subsection}{\numberline {7.3}估计量的评选标准}{23}
-\contentsline {subsection}{\numberline {7.4}区间估计}{23}
-\contentsline {subsection}{\numberline {7.5}正态总体均值与方差的区间估计}{23}
-\contentsline {subsection}{\numberline {7.6}（0-1）分布参数的区间估计}{23}
-\contentsline {subsection}{\numberline {7.7}单侧置信区间}{23}
+\contentsline {section}{\numberline {7}第七章\ 参数估计}{22}
+\contentsline {subsection}{\numberline {7.1}点估计}{22}
+\contentsline {subsubsection}{\numberline {7.1.1}矩估计法}{22}
+\contentsline {subsubsection}{\numberline {7.1.2}最大似然估计法}{23}
+\contentsline {subsection}{\numberline {7.2}基于截尾样本的最大似然估计}{25}
+\contentsline {subsection}{\numberline {7.3}估计量的评选标准}{25}
+\contentsline {subsection}{\numberline {7.4}区间估计}{25}
+\contentsline {subsection}{\numberline {7.5}正态总体均值与方差的区间估计}{25}
+\contentsline {subsection}{\numberline {7.6}（0-1）分布参数的区间估计}{25}
+\contentsline {subsection}{\numberline {7.7}单侧置信区间}{25}
