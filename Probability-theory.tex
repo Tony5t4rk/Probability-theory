@@ -481,9 +481,19 @@
 	
 	若总体 $ X $ 属连续型,其概率密度 $ f(x; \theta ), \theta \in \Theta $ 的形式已知, $ \theta $ 为待估参数, $ \Theta $ 是 $ \theta $ 可能取值的范围.设 $ X_{1},X_{2}, \cdots ,X_{n} $ 是来自 $ X $ 的样本,则 $ X_{1},X_{2}, \cdots ,X_{n} $ 的联合密度为 $$ \prod_{i=1}^{n}f(x_{i}, \theta ). $$ 设 $ x_{1},x_{2}, \cdots ,x_{n} $ 是相应于样本 $ X_{1},X_{2}, \cdots ,X_{n} $ 的一个样本值,则随机点 $ (X_{1},X_{2}, \cdots ,X_{n}) $ 落在点 $ (x_{1},x_{2}, \cdots ,x_{n}) $ 的邻域(边长分别为 $ {\rm d}x_{1},{\rm d}x_{2}, \cdots ,{\rm d}x_{n} $ 的 $ n $ 维立方体)内的概率近似地为 $$ \prod_{i=1}^{n} f(x_{i}; \theta ){\rm d}x_{i}. $$ 其值岁 $ \theta $ 的取值而变化.与离散型的情况一样,我们取 $ \theta $ 的估计值 $ \hat{ \theta } $ 使概率取到最大值,但因子 $ \prod_{i=1}^{n}{\rm d}x_{i} $ 不随 $ \theta $ 而变,故只需考虑函数 $$ L( \theta )=L(x_{1},x_{2}, \cdots ,x_{n}; \theta )= \prod_{i=1}^{n}f(x_{i}; \theta ) $$ 的最大值.这里 $ L( \theta ) $ 称为样本的 \textbf{似然函数}.若 $$ L(x_{1},x_{2}, \cdots ,x_{n}; \hat{ \theta })= \max\limits_{ \theta \in \Theta }L(x_{1},x_{2}, \cdots ,x_{n}; \theta ), $$ 则称 $ \hat{ \theta }(x_{1},x_{2}, \cdots ,x_{n}) $ 为 $ \theta $ 的 \textbf{最大似然函数估计值},称 $ \hat{ \theta }(X_{1},X_{2}, \cdots ,X_{n}) $ 为 $ \theta $ 的 \textbf{最大似然估计值}.这样,确定最大似然估计量的问题就归结为微分学中的求最大值的问题了.在很多情况下, $ p(x; \theta ) $ 和 $ f(x; \theta ) $ 关于 $ \theta $ 可微,这是 $ \hat{ \theta } $ 常可从方程 $$ \frac{\rm d}{{\rm d} \theta } L( \theta )=0 $$ 解得.又因 $ L( \theta ) $ 与 $ \ln L( \theta ) $ 在同一 $ \theta $ 处取到极值,因此, $ \theta $ 的最大似然估计 $ \theta $ 也可以从 \textbf{对数似然方程} $$ \frac{\rm d}{{\rm d} \theta } \ln L( \theta )=0 $$ 求得.
 	
-	\subsection{基于截尾样本的最大似然估计}
-	
 	\subsection{估计量的评选标准}
+	
+	\subsubsection{无偏性}
+	
+	\textbf{无偏性:} 若估计量 $ \hat{ \theta } = \hat{ \theta } (X_{1},X_{2}, \cdots ,X_{n}) $ 的数学期望 $ E( \hat{ \theta } ) $ 存在,且对于任意 $ \theta \in \Theta $ 有 $$ E( \hat{ \theta } )= \theta , $$ 则称 $ \hat{ \theta } $ 是 $ \theta $ 的 \textbf{无偏估计量}.
+	
+	\subsubsection{有效性}
+	
+	\textbf{有效性:} 设 $ \hat{ \theta } _{1} = \hat{ \theta} _{1} (X_{1},X_{2}, \cdots ,X_{n}) $ 与 $ \hat{ \theta } _{1} = \hat{ \theta } _{1} (X_{1},X_{2}, \cdots ,X_{n}) $ 都是 $ \theta $ 的无偏估计量,若对于任意 $ \theta \in \Theta $ ,有 $$ D( \hat{ \theta } _{1} ) \le D( \hat{ \theta } _{1} ), $$ 且至少对于某一个 $ \theta \in \Theta $ 上市中的不等号成立,则称 $ \hat{ \theta } _{1} $ 较 $ \hat{ \theta } _{2} $ \textbf{有效}.
+	
+	\subsubsection{相合性}
+	
+	\textbf{相合性:} 设 $ \hat{ \theta } (X_{1},X_{2}, \cdots ,X_{n}) $ 为参数 $ \theta $ 的估计量,若对于任意 $ \theta \in \Theta $ ,当 $ n \to \infty $ 时, $ \hat{ \theta } (X_{1},X_{2}, \cdots ,X_{n}) $ 依概率收敛于 $ \theta $ ,则称 $ \hat{ \theta } $ 为 $ \theta $ 的 \textbf{相合估计量}. 即若对于任意 $ \theta \in \Theta $ 都满足:对于任意 $ \epsilon >0 $ ,有 $$ \lim\limits_{n \to \infty }P\{| \hat{ \theta } - \theta |< \epsilon \}=1, $$ 则称 $ \hat{ \theta } $ 是 $ \theta $ 的 \textbf{相合估计量}.
 	
 	\subsection{区间估计}
 	
