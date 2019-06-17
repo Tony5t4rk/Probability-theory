@@ -1,59 +1,58 @@
-\contentsline {section}{\numberline {1}第一章\ 概率论的基本概念}{3}
-\contentsline {subsection}{\numberline {1.1}随机试验}{3}
-\contentsline {subsection}{\numberline {1.2}样本空间、随机事件}{3}
-\contentsline {subsubsection}{\numberline {1.2.1}样本空间}{3}
-\contentsline {subsubsection}{\numberline {1.2.2}随机事件}{3}
-\contentsline {subsubsection}{\numberline {1.2.3}事件间的关系与事件的运算}{3}
-\contentsline {subsection}{\numberline {1.3}频率与概率}{4}
-\contentsline {subsubsection}{\numberline {1.3.1}频率}{4}
-\contentsline {subsubsection}{\numberline {1.3.2}概率}{5}
-\contentsline {subsection}{\numberline {1.4}等可能概型（古典概型）}{5}
-\contentsline {subsection}{\numberline {1.5}条件概率}{6}
-\contentsline {subsubsection}{\numberline {1.5.1}条件概率}{6}
-\contentsline {subsubsection}{\numberline {1.5.2}乘法定理}{6}
-\contentsline {subsubsection}{\numberline {1.5.3}全概率公式和贝叶斯公式}{6}
-\contentsline {subsection}{\numberline {1.6}独立性}{7}
-\contentsline {section}{\numberline {2}第二章\ 随机变量及其分布}{7}
-\contentsline {subsection}{\numberline {2.1}随机变量}{7}
-\contentsline {subsection}{\numberline {2.2}离散型随机变量及其分布率}{7}
-\contentsline {subsubsection}{\numberline {2.2.1}(0-1)分布}{7}
-\contentsline {subsubsection}{\numberline {2.2.2}伯努利试验、二项分布}{8}
-\contentsline {subsubsection}{\numberline {2.2.3}泊松分布}{8}
-\contentsline {subsection}{\numberline {2.3}随机变量的分布函数}{8}
-\contentsline {subsection}{\numberline {2.4}连续型随机变量及其概率密度}{8}
-\contentsline {subsubsection}{\numberline {2.4.1}均匀分布}{9}
-\contentsline {subsubsection}{\numberline {2.4.2}指数分布}{9}
-\contentsline {subsubsection}{\numberline {2.4.3}正态分布}{9}
-\contentsline {subsection}{\numberline {2.5}随机变量的函数的分布}{10}
-\contentsline {section}{\numberline {3}第三章\ 多维随机变量及其分布}{10}
-\contentsline {subsection}{\numberline {3.1}二维随机变量}{10}
-\contentsline {subsection}{\numberline {3.2}边缘分布}{12}
-\contentsline {subsection}{\numberline {3.3}条件分布}{13}
-\contentsline {subsection}{\numberline {3.4}相互独立的随机变量}{13}
-\contentsline {section}{\numberline {4}第四章\ 随机变量的数字特征}{14}
-\contentsline {subsection}{\numberline {4.1}数学期望}{14}
-\contentsline {subsection}{\numberline {4.2}方差}{15}
-\contentsline {subsection}{\numberline {4.3}协方差及相关系数}{15}
-\contentsline {subsection}{\numberline {4.4}矩、协方差矩阵}{16}
-\contentsline {section}{\numberline {5}第五章\ 大数定律及中心极限定理}{17}
-\contentsline {subsection}{\numberline {5.1}大数定律}{17}
-\contentsline {subsection}{\numberline {5.2}中心极限定理}{18}
-\contentsline {section}{\numberline {6}第六章\ 样本及抽样分布}{18}
-\contentsline {subsection}{\numberline {6.1}随机样本}{18}
-\contentsline {subsection}{\numberline {6.2}抽样分布}{19}
-\contentsline {subsubsection}{\numberline {6.2.1} $ \chi ^{2} $ 分布 }{20}
-\contentsline {subsubsection}{\numberline {6.2.2} $ t $ 分布}{20}
-\contentsline {subsubsection}{\numberline {6.2.3} $ F $ 分布}{21}
-\contentsline {subsubsection}{\numberline {6.2.4}正态总体的样本均值与样本方差的分布}{21}
-\contentsline {section}{\numberline {7}第七章\ 参数估计}{22}
-\contentsline {subsection}{\numberline {7.1}点估计}{22}
-\contentsline {subsubsection}{\numberline {7.1.1}矩估计法}{22}
-\contentsline {subsubsection}{\numberline {7.1.2}最大似然估计法}{23}
-\contentsline {subsection}{\numberline {7.2}估计量的评选标准}{25}
-\contentsline {subsubsection}{\numberline {7.2.1}无偏性}{25}
-\contentsline {subsubsection}{\numberline {7.2.2}有效性}{25}
-\contentsline {subsubsection}{\numberline {7.2.3}相合性}{25}
-\contentsline {subsection}{\numberline {7.3}区间估计}{26}
-\contentsline {subsection}{\numberline {7.4}正态总体均值与方差的区间估计}{26}
-\contentsline {subsubsection}{\numberline {7.4.1}单个总体 $ N( \mu , \sigma ^{2} ) $ 的均值 $ \mu $ 的置信区间}{26}
-\contentsline {subsubsection}{\numberline {7.4.2}两个总体 $ N( \mu _{1} , \sigma _{1}^{2} ), N( \mu _{2} , \sigma _{2}^{2} ) $ 的均值差 $ \mu _{1} - \mu _{2} $ 的置信区间}{27}
+\contentsline {section}{\numberline {1}第一章\ 概率论的基本概念}{3}% 
+\contentsline {subsection}{\numberline {1.1}随机试验}{3}% 
+\contentsline {subsection}{\numberline {1.2}样本空间、随机事件}{3}% 
+\contentsline {subsubsection}{\numberline {1.2.1}样本空间}{3}% 
+\contentsline {subsubsection}{\numberline {1.2.2}随机事件}{3}% 
+\contentsline {subsubsection}{\numberline {1.2.3}事件间的关系与事件的运算}{3}% 
+\contentsline {subsection}{\numberline {1.3}频率与概率}{4}% 
+\contentsline {subsubsection}{\numberline {1.3.1}频率}{4}% 
+\contentsline {subsubsection}{\numberline {1.3.2}概率}{5}% 
+\contentsline {subsection}{\numberline {1.4}等可能概型（古典概型）}{5}% 
+\contentsline {subsection}{\numberline {1.5}条件概率}{6}% 
+\contentsline {subsubsection}{\numberline {1.5.1}条件概率}{6}% 
+\contentsline {subsubsection}{\numberline {1.5.2}乘法定理}{6}% 
+\contentsline {subsubsection}{\numberline {1.5.3}全概率公式和贝叶斯公式}{6}% 
+\contentsline {subsection}{\numberline {1.6}独立性}{7}% 
+\contentsline {section}{\numberline {2}第二章\ 随机变量及其分布}{7}% 
+\contentsline {subsection}{\numberline {2.1}随机变量}{7}% 
+\contentsline {subsection}{\numberline {2.2}离散型随机变量及其分布率}{7}% 
+\contentsline {subsubsection}{\numberline {2.2.1}(0-1)分布}{7}% 
+\contentsline {subsubsection}{\numberline {2.2.2}伯努利试验、二项分布}{8}% 
+\contentsline {subsubsection}{\numberline {2.2.3}泊松分布}{8}% 
+\contentsline {subsection}{\numberline {2.3}随机变量的分布函数}{8}% 
+\contentsline {subsection}{\numberline {2.4}连续型随机变量及其概率密度}{8}% 
+\contentsline {subsubsection}{\numberline {2.4.1}均匀分布}{9}% 
+\contentsline {subsubsection}{\numberline {2.4.2}指数分布}{9}% 
+\contentsline {subsubsection}{\numberline {2.4.3}正态分布}{9}% 
+\contentsline {subsection}{\numberline {2.5}随机变量的函数的分布}{10}% 
+\contentsline {section}{\numberline {3}第三章\ 多维随机变量及其分布}{10}% 
+\contentsline {subsection}{\numberline {3.1}二维随机变量}{10}% 
+\contentsline {subsection}{\numberline {3.2}边缘分布}{12}% 
+\contentsline {subsection}{\numberline {3.3}条件分布}{13}% 
+\contentsline {subsection}{\numberline {3.4}相互独立的随机变量}{13}% 
+\contentsline {section}{\numberline {4}第四章\ 随机变量的数字特征}{14}% 
+\contentsline {subsection}{\numberline {4.1}数学期望}{14}% 
+\contentsline {subsection}{\numberline {4.2}方差}{15}% 
+\contentsline {subsection}{\numberline {4.3}协方差及相关系数}{15}% 
+\contentsline {subsection}{\numberline {4.4}矩、协方差矩阵}{16}% 
+\contentsline {section}{\numberline {5}第五章\ 大数定律及中心极限定理}{17}% 
+\contentsline {subsection}{\numberline {5.1}大数定律}{17}% 
+\contentsline {subsection}{\numberline {5.2}中心极限定理}{18}% 
+\contentsline {section}{\numberline {6}第六章\ 样本及抽样分布}{18}% 
+\contentsline {subsection}{\numberline {6.1}随机样本}{18}% 
+\contentsline {subsection}{\numberline {6.2}抽样分布}{19}% 
+\contentsline {subsubsection}{\numberline {6.2.1} $ \chi ^{2} $ 分布 }{20}% 
+\contentsline {subsubsection}{\numberline {6.2.2} $ t $ 分布}{20}% 
+\contentsline {subsubsection}{\numberline {6.2.3} $ F $ 分布}{21}% 
+\contentsline {subsubsection}{\numberline {6.2.4}正态总体的样本均值与样本方差的分布}{21}% 
+\contentsline {section}{\numberline {7}第七章\ 参数估计}{22}% 
+\contentsline {subsection}{\numberline {7.1}点估计}{22}% 
+\contentsline {subsubsection}{\numberline {7.1.1}矩估计法}{22}% 
+\contentsline {subsubsection}{\numberline {7.1.2}最大似然估计法}{23}% 
+\contentsline {subsection}{\numberline {7.2}估计量的评选标准}{25}% 
+\contentsline {subsubsection}{\numberline {7.2.1}无偏性}{25}% 
+\contentsline {subsubsection}{\numberline {7.2.2}有效性}{25}% 
+\contentsline {subsubsection}{\numberline {7.2.3}相合性}{25}% 
+\contentsline {subsection}{\numberline {7.3}区间估计}{26}% 
+\contentsline {subsection}{\numberline {7.4}正态总体均值与方差的区间估计}{26}% 
+\contentsline {subsubsection}{\numberline {7.4.1}一个正态总体 $ X \sim N ( \mu , \sigma ^{2}) $ 的情形}{26}% 

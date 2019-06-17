@@ -499,28 +499,22 @@
 	
 	设总体 $ X $ 的分布函数 $ F(x; \theta ) $ 含有一个未知参数 $ \theta , \theta \in \Theta ( \Theta  $ 是 $ \theta $ 可能取值的范围),对于给定值 $ \alpha (0< \alpha <1) $ ,若由来自 $ X $ 的样本 $ X_{1},X_{2}, \cdots ,X_{n} $ 确定的两个统计量 $ \underline{ \theta } = \underline{ \theta } (X_{1},X_{2}, \cdots ,X_{n}) $ 和 $ \bar{ \theta } = \bar{ \theta } (X_{1},X_{2}, \cdots ,X_{n})( \underline{ \theta } < \bar{ \theta } ) $ ,对于任意 $ \theta \in \Theta $ 满足 $$ P\{ \underline{ \theta } (X_{1},X_{2}, \cdots ,X_{n})< \theta < \bar{ \theta } (X_{1},X_{2}, \cdots ,X_{n}) \} \ge 1 - \alpha , $$ 则称随机区间 $ (\underline{ \theta } , \bar{ \theta } ) $ 是 $ \theta $ 的置信水平为 $ 1- \alpha $ 的 \textbf{置信区间}, $ \underline{ \theta } $ 和 $ \bar{ \theta } $ 分别称为置信水平为 $ 1- \alpha $ 的双侧置信区间的 \textbf{置信下限} 和 \textbf{置信上限}, $ 1- \alpha $ 称为 \textbf{置信水平}.
 	
-	求未知参数 $ \theta $ 的置信区间的具体做法如下.
-	\begin{enumerate}
-		\item [1.] 寻求一个样本 $ X_{1},X_{2}, \cdots ,X_{n} $ 和 $ \theta $ 的函数 $ W=W(X_{1},X_{2}, \cdots ,X_{n}; \theta ), $ 使得 $ W $ 的分布不依赖于 $ \theta $ 以及其他未知参数,称具有这种性质的函数 $ W $ 为 \textbf{枢轴量}.
-		\item [2.] 对于给定的置信水平 $ 1- \alpha $ 给定两个常数 $ a,b $ 使得 $$ P\{a<W(X_{1},X_{2}, \cdots ,X_{n}; \theta )<b\}=1- \alpha . $$ 若能从 $ a<W(X_{1},X_{2}, \cdots ,X_{n}; \theta )<b $ 得到与之等价的 $ \theta $ 的不等式 $ \underline{ \theta }< \theta < \bar{ \theta } $ ,其中 $ \underline{ \theta } = \underline{ \theta }(X_{1},X_{2}, \cdots ,X_{n}), \bar{ \theta }= \bar{ \theta }(X_{1},X_{2}, \cdots ,X_{n}) $ 都是统计量.那么 $ (\underline{ \theta } , \bar{ \theta } ) $ 就是 $ \theta $ 的一个置信水平为 $ 1- \alpha $ 的置信区间.
-	\end{enumerate}
+%	求未知参数 $ \theta $ 的置信区间的具体做法如下.
+%	\begin{enumerate}
+%		\item [1.] 寻求一个样本 $ X_{1},X_{2}, \cdots ,X_{n} $ 和 $ \theta $ 的函数 $ W=W(X_{1},X_{2}, \cdots ,X_{n}; \theta ), $ 使得 $ W $ 的分布不依赖于 $ \theta $ 以及其他未知参数,称具有这种性质的函数 $ % $ 为 \textbf{枢轴量}.
+%		\item [2.] 对于给定的置信水平 $ 1- \alpha $ 给定两个常数 $ a,b $ 使得 $$ P\{a<W(X_{1},X_{2}, \cdots ,X_{n}; \theta )<b\}=1- \alpha . $$ 若能从 $ a<W(X_{1},X_{2}, \cdots ,X_{n}; \theta )<b $ 得到与之等价的 $ \theta $ 的不等式 $ \underline{ \theta }< \theta < \bar{ \theta } $ ,其中 $ \underline{ \theta } = \underline{ \theta }(X_{1},X_{2}, \cdots ,X_{n}), \bar{ \theta }= \bar{ \theta }(X_{1},X_{2}, \cdots ,X_{n}) $ 都是统计量.那么 $ (\underline{ \theta } , \bar{ \theta } ) $ 就是 $ \theta $ 的一个置信水平为 $ 1- \alpha $ 的置信区间.
+%	\end{enumerate}
 
-	枢轴量 $ W(X_{1},X_{2}, \cdots ,X_{n}; \theta ) $ 的构造,通常可以从 $ \theta $ 的点估计着手考虑.通常的正态总体的参数的置信区间可以用上述步骤推得.
+%	枢轴量 $ W(X_{1},X_{2}, \cdots ,X_{n}; \theta ) $ 的构造,通常可以从 $ \theta $ 的点估计着手考虑.通常的正态总体的参数的置信区间可以用上述步骤推得.
 	
 	\subsection{正态总体均值与方差的区间估计}
 	
-	\subsubsection{单个总体 $ N( \mu , \sigma ^{2} ) $ 的均值 $ \mu $ 的置信区间}
+	\subsubsection{一个正态总体 $ X \sim N ( \mu , \sigma ^{2}) $ 的情形}
 	
 	\begin{enumerate}
-		\item [1.] \textbf{$ \sigma ^{2} $ 为已知} \\ 采用枢轴量 $ \frac{ \bar{X} - \mu }{ \frac{ \sigma }{ \sqrt{n} } } $ ,得 $ \mu $ 的一个置信水平为 $ 1- \alpha $ 的置信区间为 $$ ( \bar{X} - \frac{ \sigma z_{ \frac{ \alpha }{2} } }{ \sqrt{n} }, \bar{X} + \frac{ \sigma z_{ \frac{ \alpha }{2} } }{ \sqrt{n} }); $$
-		\item [2.] \textbf{$ \sigma ^{2} $ 为未知} \\ 采用枢轴量 $ \frac{ \bar{X} - \mu }{ \frac{ S }{ \sqrt{n} } } $ ,得 $ \mu $ 的一个置信水平为 $ 1- \alpha $ 的置信区间为 $$ ( \bar{X} - \frac{S t_{ \frac{ \alpha }{2} } (n-1)}{ \sqrt{n} } , \bar{X} + \frac{S t_{ \frac{ \alpha }{2} } (n-1)}{ \sqrt{n} } ). $$
-	\end{enumerate}
-
-	\subsubsection{两个总体 $ N( \mu _{1} , \sigma _{1}^{2} ), N( \mu _{2} , \sigma _{2}^{2} ) $ 的均值差 $ \mu _{1} - \mu _{2} $ 的置信区间}
-	
-	\begin{enumerate}
-		\item [1.] \textbf{$ \sigma _{1}^{2}, \sigma _{2}^{2} $ 均为已知}
-		\item [2.] \textbf{$ \sigma _{1}^{2}, \sigma _{2}^{2} $ 均未知} 
+		\item [1.] \textbf{方差 $ \sigma ^{2} $ 已知, $ \mu $ 的置信水平为 $ 1- \alpha $ 的置信区间} \\ 采用枢轴量 $ \frac{ \bar{X} - \mu }{ \frac{ \sigma }{ \sqrt{n} } } $ ,得 $ \mu $ 的一个置信水平为 $ 1- \alpha $ 的置信区间为 $$ ( \bar{X} - \frac{ \sigma z_{ \frac{ \alpha }{2} } }{ \sqrt{n} }, \bar{X} + \frac{ \sigma z_{ \frac{ \alpha }{2} } }{ \sqrt{n} }); $$
+		\item [2.] \textbf{方差 $ \sigma ^{2} $ 未知, $ \mu $ 的置信区间} \\ 采用枢轴量 $ \frac{ \bar{X} - \mu }{ \frac{ S }{ \sqrt{n} } } $ ,得 $ \mu $ 的一个置信水平为 $ 1- \alpha $ 的置信区间为 $$ ( \bar{X} - \frac{S t_{ \frac{ \alpha }{2} } (n-1)}{ \sqrt{n} } , \bar{X} + \frac{S t_{ \frac{ \alpha }{2} } (n-1)}{ \sqrt{n} } ). $$
+		\item [3.] \textbf{当 $ \mu $ 未知时，方差 $ \sigma ^{2} $的置信区间} \\ 采用枢轴量 $ \frac{(n-1)S^{2}}{ \sigma ^{2}} $ ，得 $ \sigma ^{2} $ 的置信区间为 $$ ( \frac{(n-1)S^{2}}{ \chi _{ \frac{ \alpha }{2} }^{2}(n-1)} , \frac{(n-1)S^{2}}{ \chi _{1- \frac{ \alpha }{2} }^{2}(n-1)} ) $$
 	\end{enumerate}
 	
 \end{document}
