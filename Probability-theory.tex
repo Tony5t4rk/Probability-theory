@@ -1,0 +1,520 @@
+% !TeX spellcheck = en_US
+% !TeX encoding = UTF-8
+\documentclass[UTF8,10pt]{ctexart}
+
+\usepackage{amsmath}
+\usepackage{extarrows}
+
+\begin{document}
+	% 标题
+	\title{概率论与数理统计总结}
+	\author{刘阳}
+	\date{\today}
+	\maketitle
+	
+	% 目录
+	\tableofcontents
+	
+	% 内容
+	\section{第一章\ 概率论的基本概念}
+	
+	\subsection{随机试验}
+	
+	\begin{itemize}
+		\item [随机试验:] {
+			\begin{enumerate}
+				\item [1.] 可以在相同条件下重复地进行;
+				\item [2.] 每次试验的可能结果不止一个，并且能事先明确实验的所有可能结果;
+				\item [3.] 进行一次实验之前不能确定哪一个结果会出现.
+			\end{enumerate}
+		}
+	\end{itemize}
+
+	\subsection{样本空间、随机事件}
+	
+	\subsubsection{样本空间}
+	
+	随机试验E的所有可能结果组成的集合称为 \textbf{随机试验}.
+	
+	样本空间的元素，即E的每个结果称为 \textbf{样本点}.
+	\subsubsection{随机事件}
+	
+	试验E的样本空间S的子集称为 \textbf{随机事件}，简称 \textbf{事件}.
+	
+	每次试验中，当且仅当这一子集的一个样本点出现称为 \textbf{事件发生}.
+	
+	有一个样本点组成的单点集称为 \textbf{基本事件}.
+	
+	样本空间S包含所有的样本点，它是S自身的子集，在每次试验中它总是发生的，S成为 \textbf{必然事件}.
+	
+	空集 $ \emptyset $ 不包含任何样本点，它也作为样本空间的子集，他在每次试验中都不发生， $ \emptyset $ 称为 \textbf{不可能事件}.
+	
+	\subsubsection{事件间的关系与事件的运算}
+	
+	\begin{enumerate}
+		\item [1.] 若 $ A \subset B $ ，则称事件 $ B $ 包含事件 $ A $ ，这指的是事件 $ A $ 发生必导致事件 $ B $ 发生. \\ 若 $ A \subset B $ 且 $ B \subset A $ ，即 $ A = B $ ，则称事件 $ A $ 与事件 $ B $  \textbf{相等}.
+		\item [2.] 事件 $ A \cup B=\{x|x \in A 或 x \in B\} $ 称为事件 $ A $ 与事件 $ B $ 的 \textbf{和事件}.当且仅当 $ A,B $ 中至少一个发生时，事件 $ A \cup B $ 发生. \\ 类似地，称 $ \bigcup\limits_{k=1}^{n}A_{k} $ 为 $ n $ 个事件 $ A_{1},A_{2}, \cdots ,A_{n} $ 的 \textbf{和事件}；称 $ \bigcup\limits_{k=1}^{\infty}A_{k} $ 为可列个事件 $ A_{1},A_{2}, \cdots $ 的和事件.
+		\item [3.] 事件 $ A \cap B=\{x|x \in A 且 x \in B\} $ 称为事件 $ A $ 与事件 $ B $ 的 \textbf{积事件}.当且仅当 $ A,B $ 同时发生时，事件 $ A \cap B $ 发生. $ A \cap B $ 也记作 $ AB $ . \\ 类似地，称 $ \bigcap\limits_{k=1}^{n}A_{k} $ 为 $ n $ 个事件 $ A_{1},A_{2}, \cdots ,A_{n} $ 的 \textbf{积事件}；称 $ \bigcap\limits_{k=1}^{\infty}A_{k} $ 为可列个事件 $ A_{1},A_{2}, \cdots $ 的积事件.
+		\item [4.] 事件 $ A-B=\{x|x \in A 且 x \notin B\} $ 称为事件 $ A $ 与事件 $ B $ 的 \textbf{差事件}.当且仅当 $ A $ 发生、 $ B $ 不发生时事件 $ A-B $ 发生.
+		\item [5.] 若 $ A \cap B= \emptyset $ 则称事件 $ A $ 与事件 $ B $ 是 \textbf{互不相容的}，或 \textbf{互斥的}.这指的是事件 $ A $ 与事件 $ B $ 不能同时发生.基本事件也是两两互不相容的.
+		\item [6.] 若 $ A \cup B=S $ 且 $ A \cap B= \emptyset $ ，则称事件 $ A $ 与事件 $ B $ 互为 \textbf{逆事件}. 又称事件 $ A $ 与事件 $ B $ 互为 \textbf{对立事件}.这指的是对每次试验而言，事件 $ A,B $ 中必有一个发生，且仅有一个发生. $ A $ 的对立事件记为 $ \bar{A} $. $ \bar{A} =S-A $ 
+	\end{enumerate}
+
+	\begin{itemize}
+		\item [交换律:] $ A \cup B=B \cup A $ ; \\ $  A \cap B=B \cap A  $ .
+		\item [结合律:] $ A \cup (B \cup C)=(A \cup B) \cup C $ ; \\ $  A \cap (B \cap C)=(A \cap B) \cap C $ .
+		\item [分配律:] $ A \cup (B \cap C)=(A \cup B) \cap (A \cup C) $ ; \\ $ A \cap (B \cup C)=(A \cap B) \cup (A \cap C) $ .
+		\item [德摩根律:] $ \bar{A \cup B} = \bar{A} \cap \bar{B} $ ; $ \bar{A \cap B} = \bar{A} \cup \bar{B} $ .
+	\end{itemize}
+	
+	\subsection{频率与概率}
+	
+	\subsubsection{频率}
+	
+	在相同条件下，进行了 $ n $ 次试验，在这 $ n $ 次试验中，事件 $ A $ 发生的次数为 $ n_{A} $ 称为事件 $ A $ 发生的 \textbf{频数}.比值 $ \frac{n_{A}}{n} $ 称为事件 $ A $ 发生的 \textbf{频率}，并记成 $ f_{n}(A) $ 
+	
+	\begin{itemize}
+		\item [性质:] {
+			\begin{enumerate}
+				\item [1.] $ 0 \le f_{n}(A) \le 1 $ ;
+				\item [2.] $ f_{n}(S)=1 $ ;
+				\item [3.] 若 $A_{1},A_{2}, \cdots ,A_{k} $ 是两两互不相容的事件，则 $$ f_{n}(A_{1} \cup A_{2} \cup \cdots \cup A_{k})=f_{n}(A_{1})+f_{n}(A_{2})+ \cdots +f_{n}(A_{k}). $$ 
+			\end{enumerate}
+		}
+	\end{itemize}
+
+	\subsubsection{概率}
+	
+	设 $ E $ 是随机试验， $ S $ 是它的样本空间.对于 $ E $ 的每一事件 $ A $ 赋予一个实数，记为 $ P(A) $ ，称为事件 $ A $ 的 \textbf{概率}，如果集合函数 $ P( \cdot ) $ 满足以下条件:
+	
+	\begin{enumerate}
+		\item [1.] \textbf{非负性:} 对于每一个事件 $ A $ ，有 $ P(A) \ge 0 $ ;
+		\item [2.] \textbf{规范性:} 对于必然事件 $ S $ ，有 $ P(S)=1 $ ;
+		\item [3.] \textbf{可列可加性:} 设 $ A_{1},A_{2}, \cdots $ 是两两互不相容的事件，即对于 $ A_{i}A_{j}= \emptyset $ ， $ i \neq ,i,j=1,2, \cdots , $ 有 $$ P(A_{1} \cup A_{2} \cup \cdots)=P(A_{1})+P(A_{2})+ \cdots . $$ 
+	\end{enumerate}
+
+	\begin{itemize}
+		\item [性质:] {
+			\begin{enumerate}
+				\item [1.]  $ P( \emptyset )=0 $ .
+				\item [2.] 若 $ A_{1},A_{2}, \cdots ,A_{n} $ 是两两互不相容的事件，则有 $$ P(A_{1} \cup A_{2} \cup \cdots \cup A_{n})=P(A_{1})+P(A_{2})+ \cdots +P(A_{n}). $$ 
+				\item [3.] 设 $ A,B $ 是两个事件，若 $ A \subset B $ ，则有 $$ P(B-A)=P(B)-P(A); $$ $$ P(B) \ge P(A). $$ 
+				\item [4.] 对于任一事件 $ A $ ，有 $$ P(A) \le 1. $$ 
+				\item [5.] 对于任意两事件 $ A,B $ 有 $$ P(A \cup B)=P(A)+P(B)-P(AB). $$ 
+			\end{enumerate}
+		}
+	\end{itemize}
+	
+	\subsection{等可能概型（古典概型）}
+	
+	\begin{enumerate}
+		\item [1.] {试验的样本空间只包含有限个元素.}
+		\item [2.] {试验中每个基本事件发生的可能性相同.}
+	\end{enumerate}
+
+	具有以上两个特点的试验称为 \textbf{等可能概型}.它在概率论发展初期曾是主要的研究对象，所以也成为 \textbf{古典概型}.
+	
+	设试验的样本空间为 $ S=\{e_{1},e_{2}, \cdots ,e_{n}\}$ 若 $ A $ 包含 $ k $ 个基本事件则有: \\ $$ P(A)=\sum\limits_{j=1}^{k}P(\{e_{i_{j}}\})= \frac{k}{n} = \frac{A \mbox{包含的基本事件数} }{S \mbox{中基本事件的总数} }. $$ 
+	
+	\textbf{超几何分布}的概率公式: $$ p= \frac{ \binom{D}{k} \binom{N-D}{n-k} }{ \binom{N}{n} }. $$ 
+	
+	\subsection{条件概率}
+	
+	\subsubsection{条件概率}
+	
+	设 $ A,B $ 是两个事件，且 $ P(A)>0 $ ，称 $$ P(B|A)= \frac{P(AB)}{P(A)} $$ 为在事件 $ A $ 发生下事件 $ B $ 发生的 \textbf{条件概率}.
+	
+	\subsubsection{乘法定理}
+	
+	设 $ P(A)>0 $ 则有 $$ P(AB)=P(B|A)P(A). $$ 
+	
+	\subsubsection{全概率公式和贝叶斯公式}
+	
+	\textbf{全概率公式:} 设试验 $ E $ 的样本空间为 $ S $ ， $ A $ 为 $ E $ 的事件， $ B_{1},B_{2}, \cdots ,B_{n} $ 为 $ S $ 的一个划分，且 $ P(B_{i})>0(i=1,2, \cdots ,n) $ ，则 $$ P(A)=P(A|B_{1})P(B_{1})+P(A|B_{2})P(B_{2})+ \cdots +P(A|B_{n})P(B_{n}). $$ 
+	
+	\textbf{贝叶斯(\texttt{Bayes})公式:} 设试验 $ E $ 的样本空间为 $ S $ ， $ A $ 为 $ E $ 的事件， $ B_{1},B_{2}, \cdots ,B_{n} $ 为 $ S $ 的一个划分，且 $ P(A)>0,P(B_{i})>0(i=1,2, \cdots ,n) $ ，则 $$ P(B_{i}|A)= \frac{P(A|B_{i})P(B_{i})}{\sum\limits_{j=1}^{n}P(A|B_{j})P(B_{j})},\ \ i=1,2, \cdots ,n. $$ 
+	
+	\subsection{独立性}
+	
+	设 $ A,B $ 两事件如果满足等式 $$ P(AB)=P(A)P(B) $$ 则称事件 $ A,B $ \textbf{相互独立}，简称 $ A,B $ \textbf{独立}.
+	
+	\begin{itemize}
+		\item [定理:] {
+			\begin{enumerate}
+				\item [1.] 设 $ A,B $ 是两事件，且 $ P(A)>0 $ .若 $ A,B $ 相互独立，则 $ P(B|A)=P(B) $.反之亦然.
+				\item [2.] 若事件 $ A $ 与 $ B $ 相互独立，则下列各对事件也相互独立: $ A $ 与 $ \bar{B} $ ， $ \bar{A} $ 与 $ B $ ， $ \bar{A} $ 与 $ \bar{B} $ .
+			\end{enumerate}
+		}
+	\end{itemize}
+	
+	一般，设 $ A_{1},A_{2}, \cdots ,A_{n} $ 是 $ n(n \ge 2) $ 个事件，如果对于其中任意 $ 2 $ 个，任意 $ 3 $ 个， $ \cdots $ ，任意 $ n $ 个事件的积事件的概率，都等于各事件概率之积，则称事件 $ A_{1},A_{2}, \cdots ,A_{n} $ 相互独立.
+	
+	\begin{itemize}
+		\item [推论:] {
+			\begin{enumerate}
+				\item [1.] 若事件 $ A_{1},A_{2}, \cdots ,A_{n}(n \ge 2) $ 相互独立，则其中任意 $ k(2 \le k \le n) $ 个事件也是相互独立的.
+				\item [2.] 若 $ n $ 个事件 $ A_{1},A_{2}, \cdots ,A_{n}(n \ge 2) $ 相互独立，则将 $ A_{1},A_{2}, \cdots ,A_{n} $ 中任意多个事件换成它们各自的对立事件，所得的 $ n $ 个事件仍相互独立.
+			\end{enumerate}
+		}
+	\end{itemize}
+	
+	\section{第二章\ 随机变量及其分布}
+	
+	\subsection{随机变量}
+	
+	设随机试验的样本空间为 $ S=\{e\} $ . $ X=X(e) $ 是定义在样本空间上的单值函数.称 $ X=X(e) $ 为 \textbf{随机变量}
+	
+	\subsection{离散型随机变量及其分布率}
+	
+	\subsubsection{(0-1)分布}
+	
+	设随机变量 $ X $ 只可能取 $ 0 $ 与 $ 1 $ 两个值，它的分布律是 $$ P\{X=k\}=p^{k}(1-p)^{1-k},k=0,1\ \ (0<p<1) $$ 则称 $ X $ 服从以 $ p $ 为参数的 $ (0-1) $ \textbf{分布}或 \textbf{两点分布}
+	
+	\subsubsection{伯努利试验、二项分布}
+	
+	设试验 $ E $ 只有两个可能结果： $ A $ 及 $ \bar{A} $ ，则称 $ E $ 为 \textbf{伯努利} \texttt{(Bernoulli)} \textbf{试验}.
+	
+	将 $ E $ 独立重复地进行 $ n $ 次，则称这一串重复的独立试验为 $ n $ \textbf{重伯努利试验}.
+	
+	以 $ X $ 表示 $ n $ 重伯努利试验中事件 $ A $ 发生的次数，每次伯努利试验中 $ A $ 事件发生的概率为 $ p $ 称随机变量 $ X $ 服从参数为 $ n,p $ 的 \textbf{二项分布}，并记为 $ X \sim b(n,p)$ .它的分布律是 $$ P\{x=k\}=\binom{n}{k}p^{k}(1-p)^{n-k},k=0,1,2, \cdots ,n $$ 
+	
+	\subsubsection{泊松分布}
+	
+	设随机变量 $ X $ 的所有可能取的值为 $0,1,2, \cdots,$ 而取各个值的概率为 $$ P\{X=k\}= \frac{ \lambda ^{k}e^{- \lambda } }{k!},k=0,1,2 \cdots , $$ 其中 $ \lambda >0$ 是常数.则称 $ X $ 服从参数为 $ \lambda $ 的 \textbf{泊松分布}，记为 $ X \sim \pi( \lambda ) $ 
+	
+	\textbf{泊松定理:} 设 $ \lambda >0 $ 是一个常数， $ n $ 是任意正整数，设 $ np_{n}= \lambda $ ，则对于任意固定的非负整数 $ k $ 有 $$ \lim\limits_{n \to \infty}p_{n}^{k}(1-p_{n})^{n-k}= \frac{ \lambda ^{k}e^{- \lambda }}{k!} $$ 
+	
+	一般，当 $ n \ge 20,p \le 0.05 $ 时用 $ \frac{ \lambda ^{k}e^{- \lambda }}{k!}( \lambda =np) $ 作为 $ \binom{n}{k} p^{k}(1-p)^{n-k} $ 的近似值效果颇佳.
+	
+	\subsection{随机变量的分布函数}
+	
+	设 $ X $ 是一个随机变量， $ x $ 是任意实数，函数 $$ F(x)=P\{X \le x\},- \infty <x< \infty $$ 称为 $ X $ 的 \textbf{分布函数}.
+	
+	\subsection{连续型随机变量及其概率密度}
+	
+	如果对于随机变量 $ X $ 的分布函数 $ F(x) $ ，存在非负可积函数 $ f(x) $，使对于任意实数 $ x $ 有 $$ F(x)= \int_{- \infty }^{x}f(t) {\rm d}t $$ 则称 $ X $ 为 \textbf{连续型随机变量}，其中函数 $ f(x) $ 称为 $ X $ 的 \textbf{概率密度函数}，简称 \textbf{概率密度}.
+	
+	\subsubsection{均匀分布}
+	
+	若连续型随机变量 $ X $ 具有概率密度 $$ f(x)= \begin{cases} \frac{1}{b-a}, & a<x<b,\\ 0, & \mbox{其他},\\ \end{cases} $$ 
+	则称 $ X $ 在区间 $ (a,b) $ 上服从 \textbf{均匀分布}.记为 $ X \sim U(a,b) $
+	
+	\subsubsection{指数分布}
+	
+	若连续型随机变量 $ X $ 的概率密度为 $$ f(x)= \begin{cases} \frac{1}{ \theta } e^{- \frac{x}{ \theta } }, & x>0,\\ 0, & \mbox{其他},\\ \end{cases} $$ 
+	其中 $ \theta >0 $ 为常数，则称 $ X $ 服从参数为 $ \theta $ 的 \textbf{指数分布}.
+	
+	\subsubsection{正态分布}
+	
+	若连续型随机变量 $ X $ 的概率密度为 $$ f(x)= \frac{1}{ \sqrt{2 \pi } \sigma } e^{- \frac{(x- \mu )^{2}}{2 \sigma ^{2}} }, - \infty <x< \infty $$ 其中 $ \mu , \sigma ( \sigma >0) $ 为常数，则称 $ X $ 服从参数为 $ \mu , \sigma $ 的 \textbf{正态分布} 或 \textbf{高斯} \texttt{(Gauss)} 分布，记为 $ X \sim N( \mu , \sigma ^{2}) $ .
+	
+	\begin{itemize}
+		\item [性质:] {
+			\begin{enumerate}
+				\item [1.] 曲线关于 $ x= \mu $ 对称.这表明对于任意 $ h>0 $ 有 $$ P\{ \mu -h<X \le \mu \}=P\{ \mu < X \le \mu +h\}. $$
+				\item [2.] 当 $ x= \mu $ 时取到最大值 $$ F( \mu )= \frac{1}{ \sqrt{2 \pi } \sigma }. $$
+			\end{enumerate}
+		}
+	\end{itemize}
+
+	特别，当 $ \mu =0, \sigma =1 $ 时称随机变量 $ X $ 服从 \textbf{标准正态分布}. 其概率密度和分布函数分别用 $ \varphi(x) , \Phi(x) $ 表示，即有 $$ \varphi(x) =\ \frac{1}{ \sqrt{2 \pi } \sigma } e^{- \frac{x^{2}}{2}}, $$ $$ \Phi(x) = \frac{1}{ \sqrt{2 \pi }} \int_{- \infty }^{x} e^{- \frac{t^{2}}{2}} {\rm d} t. $$
+	易知 $$ \Phi(-x) =1- \Phi(x). $$
+
+	\begin{itemize}
+		\item [引理:] 若 $ X \sim N( \mu , \sigma ^{2}) $ ，则 $ Z= \frac{X- \mu }{ \sigma } \sim N(0,1) $ .
+	\end{itemize}
+	
+	\subsection{随机变量的函数的分布}
+	
+	设随机变量 $ X $ 具有概率密度 $ f_X(x),- \infty <x< \infty $ ，又设函数 $ g(x) $ 处处可导且恒有 $ g'(x)>0 $ （或恒有 $ g'(x)<0 $ ）.则 $ Y=g(X) $ 是连续型随机变量，其概率密度为 $$ f_{Y}(y)= \begin{cases} f_{X}[h(y)]|h'(y)|, & \alpha <y< \beta, \\ 0, & \mbox{其他},\\ \end{cases} $$ 其中 $ \alpha = \min\{g(- \infty ),g( \infty )\}, \beta = \max\{g(- \infty ),g( \infty )\} $ ， $ h(y) $ 是 $ g(x) $ 的反函数.
+	
+	\section{第三章\ 多维随机变量及其分布}
+	
+	\subsection{二维随机变量}
+	
+	一般，设 $ E $ 是一个随机试验，它的样本空间是 $ S=\{e\} $ ，设 $ X=X(e) $ 和 $ Y=Y(e) $ 是定义在 $ S $ 上的随机变量，由它们构成的一个向量 $ (X,Y) $ ，叫做 \textbf{二维随机向量} 或 \textbf{二维随机变量}.
+	
+	设 $ (X,Y) $ 是二维随机变量，对于任意实数 $ x,y $ ，二元函数 $$ F(x,y)=P\{(X \le x) \cap (Y \le y)\} \xlongequal{\mbox{记成}} P\{X \le x,Y \le y\} $$ 称为二维随机变量 $ (X,Y) $ 的分布函数，或称为随机变量 $ X $ 和 $ Y $ 的 \textbf{联合分布函数}.
+	
+	\begin{itemize}
+		\item [性质:] {
+			\begin{enumerate}
+				\item [1.] $ F(x,y) $ 是变量 $ x $ 和 $ y $ 的不减函数，即对于固定的 $ y $ ，当 $ x_{2}>x_{1} $ 时， $ F(x_{2},y) \ge F(x_{1},y) $ ；对于任意固定的 $ x $ ，当 $ y_{2}>y_{1} $ 时， $ F(x,y_{2}) \ge F(x,y_{1}) $.
+				\item [2.] $ 0 \le F(x,y) \le 1 $ ，且 $$ \mbox{对于任意固定的} y,F(- \infty ,y)=0, $$ $$ \mbox{对于任意固定的} y,F(x,- \infty )=0, $$ $$ F(- \infty ,- \infty )=0,F( \infty , \infty )=1 $$.
+				\item [3.] $ F(x+0,y)=F(x,y),F(x,y+0)=F(x,y) $ ，即 $ F(x,y) $ 关于 $ x $ 右连续，关于 $ y $ 也右连续.
+				\item [4.] 对于任意 $ (x_{1},y_{1}) $ ， $ (x_{2},y_{2}) $ ， $ x_{1}<x_{2} $ ， $ y_{1}<y_{2} $ ，下述不等式成立： $$ F(x_{2},y_{2})-F(x_{2},y_{1})+F(x_{1},y_{1})-F(x_{1},y_{2}) \ge 0. $$
+			\end{enumerate}
+		}
+	\end{itemize}
+
+	如果二维随机变量 $ (X,Y) $ 全部可能取到的值是有限对或可列无限多对，则称 $ (X,Y) $ 是 \textbf{离散型的随机变量}.
+	
+	我们称 $ P\{X=x_{i},Y=y_{i}\}=p_{ij},i,j=1,2, \cdots $ 为二位离散型随机变量 $ (X,Y) $ 的 \textbf{分布律}，或称随机变量 $ X $ 和 $ Y $ 的 \textbf{联合分布律}.
+	
+	对于二维随机变量 $ (X,Y) $ 的分布函数 $ F(x,y) $ ，如果存在非负可积函数 $ f(x,y) $ ，使对于任意 $ x,y $ 有 $$ F(x,y)= \int_{- \infty }^{ y } \int_{- \infty }^{ x } f(u,v){\rm d}u{\rm d}v, $$ 则称 $ (X,y) $ 是 \textbf{连续型的二维随机变量}，函数 $ f(x,y) $ 称为二维随机变量 $ (X,Y) $ 的 \textbf{概率密度}，或称为随机变量 $ X $ 和 $ Y $ 的 \textbf{联合概率密度}.
+	
+	\begin{itemize}
+		\item [性质:] {
+			\begin{enumerate}
+				\item [1.] $ f(x,y) \ge 0 $
+				\item [2.] $ \int_{- \infty }^{ \infty } \int_{- \infty }^{ \infty }{\rm d}x{\rm y}=F( \infty , \infty )=1. $
+				\item [3.] 设 $ G $ 是 $ xOy $ 平面上的区域，点 $ (X,Y) $ 落在 $ G $ 内的概率为 $$ P\{(X,Y) \in G \}= \iint\limits_{G} f(x,y){\rm d}x{\rm d}y. $$
+				\item [4.] 若 $ f(x,y) $ 在点 $ (x,y) $ 连续，则有 $$ \frac{ \partial ^{2} F(x,y) }{ \partial x \partial y }=f(x,y). $$
+			\end{enumerate}
+		}
+	\end{itemize}
+
+	设 $ E $ 是一个随机试验，它的样本空间是 $ S=\{e\} $ ，设 $ X_{1}=X_{1}(e),X_{2}=X_{2}(e), \cdots , X_{n}=X_{n}(e) $ 是定义在 $ S $ 上的随机变量，由它们构成的一个 $ n $ 维向量 $ (X_{1},X_{2}, \cdots , X_{n}) $ 叫做 $ n $ \textbf{维随即向量}或 $ n $ 维随机变量.
+	
+	对于任意 $ n $ 个实验 $ x_{1},x_{2}, \cdots ,x_{n},n $ 元函数 $$ F(x_{1},x_{2}, \cdots ,x_{n})=P\{X_{1} \le x_{1},X_{2} \le x_{2}, \cdots ,X_{n} \le x_{n} \} $$ 称为 $ n $ 维随机变量 $ (X_{1},X_{2}, \cdots ,X_{n}) $ 的 \textbf{分布函数}，或随机变量 $ X_{1},X_{2}, \cdots ,X_{n} $ 的 \textbf{联合分布函数}.
+	
+	\subsection{边缘分布}
+	
+	二维随机变量 $ (X,Y) $ 作为一个整体，具有分布函数 $ F(x,y) $ .而 $ X $ 和 $ Y $ 都是随机变量，各自也有分布函数，将它们分别记为 $ F_{X}(x),F_{Y}(y) $ ，依次称为二维随机变量 $ (X,Y) $ 关于 $ X $ 和关于 $ Y $ 的 \textbf{边缘分布函数}.
+	
+	对于离散型随机变量可得 $$ F_{X}(x)=F(x, \infty )=\sum\limits_{x_{i} \le x}\sum\limits_{j=1}p_{ij} $$ $ X $ 的分布律为 $$ P\{X=x_{i}\}=\sum\limits_{j=1 }^{ \infty }p_{ij},\ \ i=1,2, \cdots . $$ 同样 $ Y $ 的分布律为 $$ P\{Y=y_{i}\}=\sum\limits_{i=1}^{ \infty }p_{ij},\ \ j=1,2, \cdots . $$ 记 $$ p_{i \cdot }=\sum\limits_{j=1}^{ \infty }p_{ij}=P\{X=x_{i}\},\ \ i=1,2, \cdots , $$ $$ p_{ \cdot j}=\sum\limits_{i=1}^{ \infty }p_{ij}=P\{Y=y_{j}\},\ \ j=1,2, \cdots , $$ 分别称 $ p_{i \cdot }(i=1,2, \cdots ) $ 和 $ p_{ \cdot j}(j=1,2, \cdots ) $ 为 $ (X,Y) $ 关于 $ X $ 和关于 $ Y $ 的 \textbf{边缘分布律}.
+	
+	对于连续型随机变量 $ (X,Y) $ 设它的概率密度为 $ f(x,y) $ ，由于 $$ F_{X}(x)=F(x, \infty )= \int_{- \infty }^{x}[ \int_{- \infty }^{ \infty }f(x,y){\rm d}y ]{\rm d}x, $$ $ X $ 是一个连续型随机变量，其概率密度为 $$ f_{X}(x)= \int_{- \infty }^{ \infty }f(x,y){\rm d}y. $$ 同样， $ Y $ 也是一个连续型随机变量，其概率密度为 $$ f_{Y}(y)= \int_{- \infty }^{ \infty }f(x,y){\rm d}x. $$ 分别称 $ f_X(x) $ ， $ f_{Y}(y) $ 为 $ (X,Y) $ 关于 $ X $ 和关于 $ Y $ 的 \textbf{边缘概率密度}.
+	
+	\subsection{条件分布}
+	
+	设 $ (X,Y) $ 是二位离散型随机变量，对于固定的 $ j $ ，若 $ P\{Y=y_{i}\}>0 $ ，则称 $$ P\{X=x_{i}|Y=y_{j}\}= \frac{P\{X=x_{i},Y=y_{j}\}}{P\{Y=y_{j}\}}= \frac{p_{ij}}{p_{ \cdot j}},\ \ i=1,2, \cdots $$ 为在 $ Y=y_{j} $ 条件下随机变量 $ X $ 的 \textbf{条件分布律}. \\ 
+	同样，对于固定的 $ i $ ，若 $ P\{X=x_{i}\}>0 $ ，则称 $$ P\{Y=y_{i}|X=x_{i}\}= \frac{P\{X=x_{i},Y=y_{j}\}}{P\{X=x_{i}\}}= \frac{p_{ij}}{p_{i \cdot }},\ \ j=1,2, \cdots $$ 为在 $ X=x_{i} $ 条件下随机变量 $ Y $ 的 \textbf{条件分布律}.
+	
+	设二维随机变量 $ (X,Y) $ 的概率密度为 $ f(x,y),(X,Y) $ 关于 $ Y $ 的边缘概率密度为 $ f_{Y}(y) $ .若对于固定的 $ y $ ， $ f_{Y}(y)>0 $ ，则称 $ \frac{f(x,y)}{f_{Y}(y)} $ 为在 $ Y=y $ 的条件下 $ X $ 的 \textbf{条件概率密度}，记为 $$ f_{X|Y}(x|y)= \frac{f(x,y)}{f_{Y}(y)}, $$ 类似地，可以定义 $$ f_{Y|X}(y|x)= \frac{f(x,y)}{f_{X}(x)}. $$
+	
+	\subsection{相互独立的随机变量}
+	
+	设 $ F(x,y) $ 及 $ F_{X}(x),F_{Y}(y) $ 分别是二维随机变量 $ (X,Y) $ 的分布函数及边缘分布函数.若对于所有 $ x,y $ 有 $$ P\{X \le x,Y \le y\}=P\{X \le x\}P\{Y \le y\}, $$ 即 $$ F(x,y)=F_{X}(x)F_{Y}(y), $$ 则称随机变量 $ X $ 和 $ Y $ 是相互独立的.
+	
+	\begin{itemize}
+		\item [定理:] 设 $ (X_{1},X_{2}, \cdots ,X_{n}) $ 和 $ (Y_{1},Y_{2}, \cdots Y_{n}) $ 相互独立，则 $ X_{i}(i=1,2, \cdots ,m) $ 和 $ Y_{j}(j=1,2, \cdots ,n) $ 相互独立.又若 $ h,g $ 是连续函数，则 $ g(X_{1},X_{2}, \cdots , X_{m}) $ 和 $ g(Y_{1}, Y_{2}, \cdots ,Y_{n}) $ 相互独立.
+	\end{itemize}
+	
+	\section{第四章\ 随机变量的数字特征}
+	
+	\subsection{数学期望}
+	
+	设离散型随机变量 $ X $ 的分布律为 $$ P\{X=x_{k}\}=p_{k}\ \ k=1,2, \cdots. $$ 若级数 $$ \sum\limits_{k=1}^{ \infty }x_{k}p_{k} $$ 绝对收敛，则称级数 $ \sum\limits_{k=1}^{ \infty }x_{k}p_{k} $ 的和为随机变量 $ X $ 的 \textbf{数学期望}.记为 $ E(X) $ .即 $$ E(X)= \sum\limits_{k=1}^{ \infty }x_{k}p_{k}. $$
+	
+	设连续型随机变量 $ X $ 的概率密度为 $ f(x) $ ，若积分 $$ \int_{- \infty }^{ \infty }xf(x){\rm d}x $$ 绝对收敛，则称积分 $ \int_{- \infty }^{ \infty }xf(x){\rm d}x $ 的值为随机变量 $ X $ 的 \textbf{数学期望}，记为 $ E(X) $ .即 $$ E(X)= \int_{- \infty }^{ \infty }xf(x){\rm d}x. $$
+	
+	数学期望简称 \textbf{期望}，又称 \textbf{均值}.
+	
+	\begin{itemize}
+		\item [性质:] {
+			\begin{enumerate}
+				\item [1.] 设 $ C $ 是常数，则有 $ E(C)=C $ .
+				\item [2.] 设 $ X $ 是随机变量， $ C $ 是常数，则有 $$ E(CX)=CE(X). $$
+				\item [3.] 设 $ X,Y $ 是两个随机变量，则有 $$ E(X+Y)=E(X)+E(Y). $$ 这一性质可以推广到任意有限多个随机变量之和的情况.
+				\item [4.] 设 $ X,Y $ 是相互独立的随机变量，则有 $$ E(XY)=E(X)E(Y). $$ 这一性质可以推广到任意有限个相互独立的随机变量之积的情况.
+			\end{enumerate}
+		}
+	\end{itemize}
+	
+	\subsection{方差}
+	
+	设 $ X $ 是一个随机变量，若 $ E\{[X-E(X)]^{2}\} $ 存在，则称 $ E\{[X-E(X)]^{2}\} $ 为 $ X $ 的 \textbf{方差}，记为 $ D(X) $ 或 $ Var(X) $ ，即 $$ D(X)=Var(X)=E\{[X-E(X)]^{2}\}. $$
+	
+	在应用上还引入量 $ \sqrt{D(X)} $ ，记为 $ \sigma(X) $ ，称为 \textbf{标准差}或 \textbf{均方差}.
+	
+	\begin{itemize}
+		\item [性质:] {
+			\begin{enumerate}
+				\item [1.] 设 $ C $ 是常数，则有 $ E(C)=0 $ .
+				\item [2.] 设 $ X $ 是随机变量， $ C $ 是常数，则有 $$ D(CX)=C^{2}D(X), $$ $$ D(X+C)=D(X). $$
+				\item [3.] 设 $ X,Y $ 是两个随机变量，则有 $$ D(X+Y)=D(X)+D(Y)+2E\{(X-E(X))(Y-E(Y))\}. $$ 特别，若 $ X,Y $ 相互独立，则有 $$ D(X+Y)=D(X)+D(Y). $$ 这一性质可以推广到任意有限多个相互独立的随机变量之和的情况.
+				\item [4.] $ D(X)=0 $ 的充要条件是 $ X $ 以概率为 $ 1 $ 取常数 $ E(X) $ ，即 $$ P\{X=E(X)\}=1. $$
+			\end{enumerate}
+		}
+	\end{itemize}
+	
+	\subsection{协方差及相关系数}
+	
+	量 $ E\{[X-E(X)][Y-E(Y)]\} $ 称为随机变量 $ X $ 与 $ Y $ 的 \textbf{协方差}，记为 $ Cov(X,Y) $ ，即 $$ Cov(X,Y)=E\{[X-E(X)][Y-E(Y)]\}. $$ 而 $$ \rho _{XY}= \frac{Cov(X,Y)}{ \sqrt{D(X)} \sqrt{D(Y)} } $$ 称为随机变量 $ X $ 与 $ Y $ 的 \textbf{相关系数}.
+	
+	由定义知 $$ Cov(X,Y)=Cov(Y,X), $$ $$ Cov(X,X)=D(X). $$
+	
+	对于任意两个随机变量 $ X $ 和 $ Y $ ，下列等式成立： $$ D(X+Y)=D(X)+D(Y)+2Cov(X,Y). $$ 将 $ Cov(X,Y) $ 的定义式展开，易得 $$ Cov(X,Y)=E(XY)-E(X)E(Y). $$ 我们常常利用这一式子计算协方差.
+	
+	\begin{itemize}
+		\item [性质:] {
+			\begin{enumerate}
+				\item [1.] $ Cov(aX,bY)=abCov(X,Y),a,b $ 是常数.
+				\item [2.] $ Cov(X_{1}+X_{2},Y)=Cov(X_{1},Y)+Cov(X_{2},Y). $
+			\end{enumerate}
+		}
+	\end{itemize}
+
+	\begin{itemize}
+		\item [定理:] {
+			\begin{enumerate}
+				\item [1.] $ | \rho _{XY} | \le 1. $
+				\item [2.] $ | \rho _{XY} | = 1 $ 的充要条件是，存在常数 $ a,b $ 使 $$ P\{Y=a+bX\}=1. $$
+			\end{enumerate}
+		}
+	\end{itemize}
+
+	当 $ | \rho _{XY} | = 1 $ 时，称 $ X $ 和 $ Y $ \textbf{不相关}.
+	
+	\subsection{矩、协方差矩阵}
+	
+	设 $ X $ 和 $ Y $ 是随机变量，若 $$ E(X^{k}),\ \ k=1,2, \cdots $$ 存在，称它为 $ X $ 的 $ k $ \textbf{阶原点矩}，简称 $ k $ 阶矩.若 $$ E\{[X-E(X)]^{k}\},\ \ k=2,3, \cdots $$ 存在，称它为 $ X $ 的 $ k $ \textbf{阶中心距}. 若 $$ E(X^{k}Y^{l}),\ \ k,l=1,2, \cdots $$ 存在，称它为 $ X $ 和 $ Y $ 的 $ k+l $ \textbf{阶混合矩}. 若 $$ E\{[X-E(X)]^{k}[Y-E(Y)]^{l}\},\ \ k,l=1,2, \cdots $$ 存在，称它为 $ X $ 和 $ Y $ 的 $ k+l $ \textbf{阶混合中心矩}.
+	
+	显然， $ X $ 的数学期望 $ E(X) $ 是 $ X $ 的一阶原点矩，方差 $ D(X) $ 是 $ X $ 的二阶中心距，协方差 $ Cov(X,Y) $ 是 $ X $ 和 $ Y $ 的二阶混合中心矩.
+	
+	设 $ n $ 维随机变量 $ (X_{1},X_{2}, \cdots ,X_{n}) $ 的二阶混合中心矩 $$ c_{ij}=Cov(X_{i},X_{j})=E\{[X_{i}-E(X_{i})][X_{j}-E(X_{j})]\},i,j=1,2, \cdots ,n $$ 都存在，则称矩阵 $$ C= \left( \begin{matrix} c_{11} & c_{12} & \cdots & c_{1n} \\ c_{21} & c_{22} & \cdots & c_{2n} \\ \vdots & \vdots & & \vdots \\ c_{n1} & c_{n2} & \cdots & c_{nn} \end{matrix} \right) $$ 为 $ n $ 维随机变量 $ (X_{1},X_{2}, \cdots ,X_{n}) $ 的 \textbf{协方差矩阵}.由于 $ c_{ij}=c_{ji}\ (i \ne j;i,j=1,2, \cdots ,n) $  ，因而上述矩阵是一个对阵矩阵.
+	
+	\section{第五章\ 大数定律及中心极限定理}
+	
+	\subsection{大数定律}
+	
+	\textbf{弱大数定理（辛钦大数定理）:} 设 $ X_{1},X_{2}, \cdots $ 是相互独立，服从同一分布的随机变量序列，且具有数学期望 $ E(X_{k})= \mu (k=1,2, \cdots ) $.作前 $ n $ 个变量的算术平均 $ \frac{1}{n} \sum\limits_{k=1}^{n}X_{k} $ .则对于任意 $ \epsilon >0 $ ，有 $$ \lim\limits_{n \to \infty }P\{| \frac{1}{n} \sum\limits_{k=1}^{n}X_{k} - \mu |< \epsilon \}=1. $$
+	
+	设 $ Y_{1},Y_{2}, \cdots ,Y_{n}, \cdots $ 是一个随机变量序列，$ a $ 是一个常数.若对于任意正数 $ \epsilon $ ，有 $$ \lim\limits_{n \to \infty }P\{|Y_{n}-a|< \epsilon \}=1, $$ 则称序列 $ Y_{1},Y_{2}, \cdots ,Y_{n}, \cdots $ \textbf{依概率收敛于 $ a $ }，记为 $$ Y_{n} \xrightarrow{P} a. $$
+	
+	\begin{itemize}
+		\item [性质:] 设 $ X_{n} \xrightarrow{P} a, Y_{n} \xrightarrow{P} b, $ 又设函数 $ g(x,y) $ 在点 $ (a,b) $ 连续，则 $$ g(X_{n},Y_{n}) \xrightarrow{P} g(a,b). $$
+	\end{itemize}
+	
+	\textbf{弱大数定理（辛钦大数定理）又可叙述为:} 设随机变量 $ X_{1},X_{2}, \cdots $ 相互独立，服从同一分布，且具有数学期望 $ E(X_{k})= \mu (k=1,2, \cdots ) $.则序列 $ \bar{X}= \frac{1}{n}\sum\limits_{k=1}^{n}X_{k} $ 依概率收敛于 $ \mu $ ，即 $ \bar{X} \xrightarrow{P} \mu $ .
+	
+	\textbf{伯努利大数定理:} 设 $ f_{A} $ 是 $ n $ 次独立重复试验中事件 $ A $ 发生的次数, $ p $ 是事件 $ A $ 在每次试验中发生的概率，则对任意正数 $ \epsilon>0 $ ，有 $$ \lim\limits_{n \to \infty }P\{| \frac{f_{A}}{n}-p |< \epsilon \}=1 $$ 或 $$ \lim\limits_{n \to \infty }P\{| \frac{f_{A}}{n}-p | \ge \epsilon \}=0. $$
+	
+	\subsection{中心极限定理}
+	
+	\textbf{独立同分布的中心极限定理:} 设随机变量 $ X_{1},X_{2}, \cdots ,X_{n}, \cdots $ 相互独立，服从同一分布，且具有数学期望和方差 $ E(X_{k})= \mu,D(X_{k})= \sigma ^{2}>0(k=1,2, \cdots ) $ ，则随机变量之和 $ \sum\limits_{k=1}^{n}X_{k} $ 的标准化变量 $$ Y_n= \frac{ \sum\limits_{k=1}^{n}X_{k}-E( \sum\limits_{k=1}^{n}X_{k} ) }{ \sqrt{D( \sum\limits_{j=1}^{n}X_{k} )} } = \frac{ \sum\limits_{k=1}^{n}X_{k}-n \mu }{ \sqrt{n} \sigma } $$ 的分布函数 $ F_{n}(x) $ 对于任意 $ x $ 满足 $$ \begin{aligned} \lim\limits_{n \to \infty }F_{n}(x) & = \lim\limits_{n \to \infty }P\{ \frac{ \sum\limits_{k=1}^{n}X_{k}-n \mu }{ \sqrt{n} \sigma } \le x \} \\ & = \int_{- \infty }^{x} \frac{1}{ \sqrt{2 \pi }e^{- \frac{t^{2}}{2}}{\rm d}t } = \Phi(x). \end{aligned} $$
+	
+%	\textbf{李雅普诺夫 ( \texttt{Lyapunov} ) 定理:} 设随机变量 $ X_{1},X_{2}, \cdots ,X_{n}, \cdots $ 相互独立，它们具有数学期望和方差 $$ E(X_{k})= \mu _{k},\ \ D(X_{k})= \sigma _{k}^{2}>0,\ \ k=1,2, \cdots , $$ 记 $$ B_{n}^{2}= \sum\limits_{k=1}^{k} \sigma _{k}^{2}. $$ 若存在正数 $ \delta $ ，使得当 $ n \to \infty $ 时, $$ \frac{1}{B_{n}^{2+ \delta }} \sum\limits_{k=1}^{n}E\{|X_{k}- \mu _{k}|^{2+ \sigma }\} \to 0, $$ 则随机变量之和 $ \sum\limits_{k=1}^{n}X_{k} $ 的标准化变量 $$ Z_{n}= \frac{ \sum\limits_{k=1}^{n}X_{k}-E( \sum\limits_{k=1}^{n}X_{k} ) }{ \sqrt{D( \sum\limits_{k=1}^{n}X_{k} )} } = \frac{ \sum\limits_{k=1}^{n}X_{k} - \sum\limits_{k=1}^{n} \mu _{k} }{B_{n}} $$ 的分布函数 $ F_{n}(x) $ 对于任意 $ x $ 满足 $$ \begin{aligned} \lim\limits_{n \to \infty }F_{n}(x) & = \lim\limits_{n \to \infty } P\{ \frac{ \sum\limits_{k=1}^{n} X_{k} - \sum\limits_{k=1}^{n} \mu _{k} }{B_{n}} \le x \} \\ & = \int_{- \infty }^{x} \frac{1}{ \sqrt{2 \pi } } e^{- \frac{t^{2}}{2} } {\rm d}t = \Phi(x). \end{aligned} $$
+	
+	\textbf{棣莫弗-拉普拉斯 ( \texttt{De Moivre-Laplace} ) 定理:} 设随机变量 $ \eta _{n}(n=1,2, \cdots ) $ 服从参数为 $ n,p(0<p<1) $ 的二项分布，则对于任意 $ x $ ，有 $$ \lim\limits_{n \to \infty } P\{ \frac{ \eta _{n}-np}{ \sqrt{np(1-p)} } \le x \}= \int_{- \infty }^{x} \frac{1}{ \sqrt{2 \pi } } e^{- \frac{t^{2}}{2} }{\rm d}t= \Phi(x). $$
+	
+	\section{第六章\ 样本及抽样分布}
+	
+	\subsection{随机样本}
+	
+	试验的全部可能的观察值称为 \textbf{总体}，每一个可能观察值称为 \textbf{个体}，总体中所包含的个体的个数称为总体的 \textbf{容量}.容量为有限的称为 \textbf{有限总体}，容量为无限的称为 \textbf{无限总体}.
+	
+	设 $ X $ 是具有分布函数 $ F $ 的随机变量，若 $ X_{1},X_{2}, \cdots ,X_{n} $ 是具有同一分布函数 $ F $ 的、相互独立的随机变量 $ X_{1},X_{2}, \cdots ,X_{n} $ 为从分布函数 $ F $ （或总体 $ F $ 、或总体 $ X $ ）得到的 \textbf{容量为 $ n $ 的简单随机样本}，简称 \textbf{样本}，它们的观察值 $ x_{1},x_{2}, \cdots ,x_{n} $ 称为 \textbf{样本值}，又称为 $ X $ 的 $ n $ 个独立的观察值.
+	
+	\subsection{抽样分布}
+	
+	设 $ X_{1},X_{2}, \cdots ,X_{n} $ 是来自总体 $ X $ 的一个样本， $ g(X_{1},X_{2}, \cdots X_{n}) $ 是 $ X_{1},X_{2}, \cdots ,X_{n} $ 的函数，若 $ g $ 中不含未知参数，则称 $ g(X_{1},X_{2}, \cdots ,X_{n}) $ 是 \textbf{统计量}.
+	
+	因为 $ X_{1},X_{2}, \cdots ,X_{n} $ 都是随机变量，而统计量 $ g(X_{1},X_{2}, \cdots ,X_{n}) $ 是随机变量的函数，因此统计量也是一个随机变量.设 $ x_{1},x_{2}, \cdots ,x_{n} $ 是相应于样本 $ X_{1},X_{2}, \cdot ,X_{n} $ 的样本值，则称 $ g(x_{1},x_{2}, \cdots ,x_{n}) $ 是 $ g(X_{1},X_{2}, \cdots X_{n}) $ 的观察值.
+	
+	设 $ X_{1},X_{2}, \cdots ,X_{n} $ 是来自总体 $ X $ 的一个样本， $ x_{1},x_{2}, \cdots x_{n} $ 是这一样本的观察值. 定义
+	
+	\textbf{样本（平）均值:} $$ \bar{X}= \frac{1}{n} \sum\limits_{i=1}^{n}X_{i}; $$
+	
+	\textbf{样本方差:} $$ S^{2}= \frac{1}{n-1} \sum\limits_{i=1}^{n}(X_{i}- \bar{X})^{2}= \frac{1}{n-1}( \sum\limits_{i=1}^{n}X_{i}^{2}-n \bar{X} ^{2} ) ; $$
+	
+	\textbf{样本标准差:} $$ S = \sqrt{S^{2}}= \sqrt{ \frac{1}{n-1} \sum\limits_{i=1}^{n}(X_{i}- \bar{X} )^{2} } ; $$
+	
+	\textbf{样本 $ k $ 阶（原点）矩:} $$ A_{k}= \frac{1}{n} \sum\limits_{i}^{k},\ \ k=1,2, \cdots ; $$
+	
+	\textbf{样本 $ k $ 阶中心矩:} $$ B_{k}= \frac{1}{n} \sum\limits_{i=1}^{n}(X_{i}- \bar{X} )^{k},\ \ k=2,3, \cdots . $$
+	
+	样本经验分布函数又称样本分布函数，记为 $ F_{n}(x) $ ，定义为 $$ F_{n}(x)= \frac{1}{n} ( \sharp X_{i} \le x),\ \ - \infty <x< \infty, $$ 其中 $ ( \sharp X_{i} \le x) $ 表示 $ X_{1},X_{2}, \cdots ,X_{n} $ 中小于或等于 $ x $ 的个数.
+	
+	\textbf{格里汶科定理:} 设 $ X_{1},X_{2}, \cdots ,X_{n} $ 是来自以 $ F(x) $ 为分布函数的总体 $ X $ 的样本， $ F_{n}(x) $ 是样本经验分布函数，则有 $$ P\{ \lim\limits_{n \to \infty} \sup\limits_{- \infty <x< \infty }|F_{n}(x)-F(x)|=0 \}=1. $$
+	
+	统计量的分布称为 \textbf{抽样分布}.
+	
+	\subsubsection{ $ \chi ^{2} $ 分布 }
+	
+	设 $ X_{1},X_{2}, \cdots ,X_{n} $ 是来自总体 $ N(0,1) $ 的样本，则称统计量 $$ \chi ^{2}=X_{1}^{2}+X_{2}^{2}+ \cdots +X_{n}^{2} $$ 服从自由度为 $ n $ 的 $ \chi ^{2} $ \textbf{分布}，记为 $ \chi ^{2} \sim \chi ^{2}(n) $ .
+	
+	$ \chi ^{2} $ 分布的概率密度为 $$ f(y)= \begin{cases} \frac{1}{2^{ \frac{n}{2} } \Gamma( \frac{n}{2} ) }y^{ \frac{n}{2} -1 }e^{- \frac{y}{2} }, & y>0, \\ 0, & \mbox{其他}. \end{cases} $$
+	
+	\textbf{ $ \chi ^{2} $ 分布的可加性:} 设 $ \chi _{1}^{2} \sim \chi ^{2}(n_{1}), \chi _{2}^{2} \sim \chi ^{2}(n2), $ 并且 $ \chi _{1}^{2}, \chi _{2}^{2} $ 相互独立，且有 $$ \chi _{1}^{2}+ \chi _{2}^{2} \sim \chi ^{2}(n_{1}+n_{2}). $$
+	
+	\textbf{ $ \chi ^{2} $ 分布的数学期望和方差:} 若 $ \chi ^{2} \sim \chi ^{2}(n) $ ，则有 $$ E( \chi ^{2} )=n,\ \ D( \chi ^{2})=2n. $$
+	
+	\textbf{ $ \chi ^{2} $ 分布的上分位点:} 对于给定正数 $ \alpha ,0< \alpha <1 $ ，称满足条件 $$ P\{ \chi ^{2}> \chi _{ \alpha }^{2}(n) \}= \int_{ \chi _{ \alpha }^{2}(n) }^{ \infty }f(y){\rm d}y= \alpha $$ 的点 $ \chi _{ \alpha }^{2}(n) $ 为 $ \chi ^{2}(n) $ 分布的上 $ \alpha $ 分位点.
+	
+	\subsubsection{ $ t $ 分布}
+	
+	设 $ X \sim N(0,1),Y \sim \chi ^{2}(n) $ ，且 $ X,Y $ 相互独立，则称随机变量 $$ t= \frac{X}{ \sqrt{ \frac{Y}{n} } } $$ 服从自由度为 $ n $ 的 \textbf{ $ t $ 分布}.记为 $ t \sim t(n) $ .
+	
+	$ t $ 分布又称 \textbf{学生氏 \texttt{(Student)} 分布}. $ t(n) $ 分布的概率密度为 $$ h(t)= \frac{ \Gamma[ \frac{n+1}{2} ] }{ \sqrt{ \pi n } \Gamma ( \frac{n}{2} ) } (1+ \frac{t^{2}}{n} )^{- \frac{n+1}{2}},\ \ - \infty <t< \infty $$
+	
+	\textbf{ $ t $ 分布的上分位点:} 对于给定的 $ \alpha,0< \alpha<1 $ ，称满足条件 $$ P\{t> t_{ \alpha }(n)\}= \int_{t_{ \alpha }(n)}^{ \infty }h(t){\rm d}t= \alpha $$ 的点 $ t_{ \alpha }(n) $ 为 $ t(n) $ 的上 $ \alpha $ 分位点.
+	
+	\subsubsection{ $ F $ 分布}
+	
+	设 $ U \sim \chi ^{2}(n_{1}),V \sim \chi ^{2}(n_{2}), $ 且 $ U,V $ 相互独立，则称随机变量 $$ F= \frac{ \frac{U}{n_{1}} }{ \frac{V}{n_{2}} } $$ 服从自由度为 $ (n_{1},n_{2}) $ 的 \textbf{ $ F $ 分布}，记为 $ F \sim F(n_{1},n_{2}). $
+	
+	$ F(n_{1},n_{2}) $ 分布的概率密度为 $$ \psi (y)= \begin{cases} \frac{ \Gamma ( \frac{n_{1}+n_{2}}{2} ) ( \frac{n_{1}}{n_{2}} )^{ \frac{n_{1}}{2} }y^{ \frac{n_{1}}{2} -1} }{ \Gamma ( \frac{n_{1}}{2} ) \Gamma ( \frac{n_{2}}{2} ) (1+ \frac{n_{1}y}{n_{2}} )^{ \frac{n_{1}+n_{2}}{2} } }, & y>0, \\ 0, & \mbox{其他.} \end{cases} $$
+	
+	\textbf{ $ F $ 分布的上分位点} 对于给定的 $ \alpha,0< \alpha <1 $ ，称满足条件 $$ P\{F>F_{ \alpha }(n_{1},n_{2})\}= \int_{F_{ \alpha }(n_{1},n_{2})}^{ \infty } \psi (y){\rm d}y= \alpha $$ 的点 $ F_{ \alpha }(n_{1},n_{2}) $ 为 $ F(n_{1},n_{2}) $ 分布的上 $ \alpha $ 分位点.
+	
+	\subsubsection{正态总体的样本均值与样本方差的分布}
+	
+	设总体 $ X $ （不管服从什么分布，只要均值和方差存在）的均值为 $ \mu $ ，方差为 $ \sigma ^{2},X_{1},X_{2}, \cdots ,X_{n} $ 是来自 $ X $ 的一个样本， $ \bar{X} ,S^{2} $ 分别是样本均值和样本方差，则有 $$ E( \bar{X} )= \mu,\ \ D( \bar{X} )= \frac{2 \sigma ^{2} }{n}. $$ 而 $$ \begin{aligned} E(S^{2}) & =E[ \frac{1}{n-1} ( \sum\limits_{i=1}^{n}X_{i}^{2}-n \bar{X} ^{2} ) ]= \frac{1}{n-1}[ \sum\limits_{i=1}^{n} E(X_{i}^{2})-nE( \bar{X} ^{2} ) ]\\ & = \frac{1}{n-1} [ \sum\limits_{i=1}^{n}( \sigma ^{2}+ \mu ^{2} )-n( \frac{ \sigma ^{2}}{n} + \mu ^{2} ) ]= \sigma ^{2} \end{aligned}, $$ 即 $$ E(S^{2})= \sigma ^{2}. $$
+	
+	进而，设 $ X \sim N( \mu , \sigma ^{2} ) $ ，知 $ \bar{X}= \frac{1}{n} \sum\limits_{i=1}^{n}X_{i} $ 也服从正态分布，于是得到以下的定理:
+	
+	\begin{itemize}
+		\item [ \textbf{定理一:}] 设 $ X_{1},X_{2}, \cdots ,X_{n} $ 是来自正态总体 $ N( \mu, \sigma ^{2}) $ 的样本， $ \bar{X} $ 是样本均值，则有 $$ \bar{X} \sim N( \mu , \frac{ \sigma ^{2}}{n}). $$
+		\item [ \textbf{定理二:}] 设 $ X_{1},X_{2}, \cdots ,X_{n} $ 是来自总体 $ N( \mu, \sigma ^{2}) $ 的样本， $ \bar{X} ,S^{2} $ 分别是样本均值和样本方差，则有 {
+			\begin{enumerate}
+				\item [1.] $ \frac{(n-1)S^{2}}{ \sigma ^{2} } \sim \chi ^{2}(n-1) ; $
+				\item [2.] $ \bar{X} $ 与 $ S^{2} $ 相互独立.
+			\end{enumerate}
+		}
+		\item [ \textbf{定理三:}] 设 $ X_{1},X_{2}, \cdots ,X_{n} $ 是来自正态总体 $ N( \mu, \sigma ^{2}) $ 的样本， $ \bar{X} $ 是样本均值，则有 $$ \frac{ \bar{X} - \mu }{ \frac{S}{ \sqrt{n} } } \sim t(n-1). $$
+		\item [ \textbf{定理四:}] 设 $ X_{1},X_{2}, \cdots ,X_{n_{1}} $ 与 $ Y_{1},Y_{2}, \cdots ,Y_{n_{2}} $ 分别是来自正态总体 $ N( \mu _{1}, \sigma _{1}^{2} ) $ 和 $ N( \mu _{2}, \sigma _{2}^{2} ) $ 的样本，且这两个样本相互独立.设 $ S_{1}^{2}= \frac{1}{n_{1}-1} \sum\limits_{i=1}^{n_{1}} (X_{i}- \bar{X} )^{2}, S_{2}^{2}= \frac{1}{n_{2}-1} \sum\limits_{i=1}^{n_{2}} (Y_{i}- \bar{Y})^{2} $ 分别是这两个样本的样本方差，则有 $$ \frac{ \frac{S_{1}^{2}}{ S_{2}^{2 } }}{ \frac{\sigma_{1}^{2}}{ \sigma_{2}^{2}} } \sim F(n_{1}-1,n_{2}-1). $$
+	\end{itemize}
+		
+	\section{第七章\ 参数估计}
+	
+	\subsection{点估计}
+	
+	\subsubsection{矩估计法}
+	
+	设 $ X $ 为连续型随机变量，其概率密度为 $ f(x; \theta _{1}, \theta _{2}, \cdots , \theta _{k}) $ ，或 $ X $ 为离散型随机变量，其分布律为 $ P\{X=x\}=p(x; \theta _{1}, \theta _{2}, \cdots , \theta _{k}) $ ，其中 $ \theta _{1}, \theta _{2}, \cdots , \theta _{k} $ 为待估参数， $ X_{1},X_{2}, \cdots ,X_{n} $ 是来自 $ X $ 的样本.假设总体 $ X $ 的前 $ k $ 阶矩 $$ \mu _{l}=E(X^{l})= \int_{- \infty }^{ \infty } x^{l}f(x; \theta _{1}, \theta _{2}, \cdots , \theta _{k}){\rm d}x\ \ ( X \mbox{连续型}) $$ 或 $$ \mu _{l}=E(X^{l})= \sum\limits_{x \int R_{X}}x^{l}p(x; \theta _{1}, \theta _{2}, \cdots , \theta _{k})\ \ ( X \mbox{离散型}),\ \ l=1,2, \cdots ,k $$ （其中 $ R_{X} $ 是 $ X $ 可能取值的范围）存在.一般来说他们是 $ \theta _{1}, \theta _{2}, \cdots , \theta _{k} $ 的函数.基于样本矩 $$ A_{l}= \frac{1}{n} \sum\limits_{i=1}^{n} X_{i}^{l} $$ 依概率收敛于相应的总体矩 $ \mu _{1}=(l=1,2, \cdots ,k) $ ，样本矩的连续函数一概率收敛于相应的总体矩的连续函数，我们就用样本矩作为相应的总体矩的估计量，而以样本矩的连续函数作为相应的总体矩的连续函数的估计量.这种估计方法称为 \textbf{矩估计法}.矩估计法的具体做法如下：设 $$ \begin{cases} \mu _{1}= \mu _{1}( \theta _{1}, \theta _{2}, \cdots , \theta_{k}), \\ \mu _{2}= \mu _{2}( \theta _{1}, \theta _{2}, \cdots , \theta_{k}), \\ \vdots \\ \mu _{k}= \mu _{k}( \theta _{1}, \theta _{2}, \cdots , \theta_{k}). \end{cases} $$ 这是一个包含 $ k $ 个未知参数 $ \theta _{1}, \theta _{2}, \cdots , \theta_{k} $ 的联立方程组.一般来说，可以从中解出 $ \theta _{1}, \theta _{2}, \cdots , \theta_{k} $ ，得到 $$ \begin{cases} \theta _{1}= \theta _{1}( \mu _{1}, \mu _{2}, \cdots , \mu _{k} ), \\ \theta _{2}= \theta _{2}( \mu _{1}, \mu _{2}, \cdots , \mu _{k} ), \\ \vdots \\ \theta _{k}= \theta _{k}( \mu _{1}, \mu _{2}, \cdots , \mu _{k} ). \end{cases} $$ 以 $ A_{i} $ 分别代替上式中的 $ \mu _{i},i=1,2, \cdots ,k $ ，就以 $$ \hat{ \theta _{i}} = \theta _{i}(A_{1},A_{2}, \cdots ,A_{k}),\ \ i=1,2, \cdots ,k $$ 分别作为 $ \theta _{i},i=1,2, \cdots ,k $ 的估计量，这种估计量称为 \textbf{矩估计量}.矩估计量的观察值称为 \textbf{矩估计值}.
+	
+	\subsubsection{最大似然估计法}
+	
+	若总体 $ X $ 属离散型，其分布律 $ P\{X=x\}=p(x; \theta ), \theta \in \Theta $ 的形式为已知， $ \theta $ 为待估参数， $ \Theta $ 是 $ \theta $ 可能取值的范围.设 $ X_{1},X_{2}, \cdots ,X_{n} $ 是来自 $ X $ 的样本，则 $ X_{1},X_{2}, \cdots ,X_{n} $ 的联合分布律为 $$ \prod_{i=1}^{n}p(x_{i}; \theta ). $$ 又设 $ x_{1},x_{2}, \cdots ,x_{n} $ 是相应于样本 $ X_{1},X_{2}, \cdots X_{n} $ 的一个样本值.易知样本 $ X_{1},X_{2}, \cdots ,X_{n} $ 取到的观察值 $ x_{1},x_{2}, \cdots ,x_{n} $ 的概率,亦即事件 $ \{X_{1}=x_{1},X_{2}=x_{2}, \cdots ,X_{n}=x_{n} \} $ 发生的概率为 $$ L( \theta )=L(x_{1},x_{2}, \cdots ,x_{n}; \theta )= \prod_{i=1}^{n} p(x_{1}; \theta ), \theta \in \Theta. $$ 这一概率随 $ \theta $ 的取值而变化,它是 $ \theta $ 的函数, $ L( \theta ) $ 称为样本的 \textbf{似然函数}(注意,这里 $ x_{1},x_{2}, \cdots ,x_{n} $ 是已知的样本值,他们都是常数).由费希尔引进的最大似然估计发,就是固定样本观察值 $ x_{1},x_{2}, \cdots ,x_{n} $ 在 $ \theta $ 取值的可能范围 $ \Theta $ 内挑选使似然函数 $ L(x_{1},x_{2}, \cdots ,x_{n}; \theta ) $ 达到最大的参数值 $ \hat{ \theta } $ ,作为参数 $ \theta $ 的估计值.即取 $ \hat{ \theta } $ 使 $$ L(x_{1},x_{2}, \cdots ,x_{n}; \hat{ \theta })=\max\limits_{ \theta \in \Theta } L(x_{1},x_{2}, \cdots ,x_{n}; \theta ). $$ 这样得到的 $ \hat{ \theta } $ 与样本值 $ x_{1},x_{2}, \cdots ,x_{n} $ 有关,常记为 $ \hat{ \theta }(x_{1},x_{2}, \cdots ,x_{n}) $ ,称为参数 $ \theta $ 的 \textbf{最大似然估计值}.而相应的统计量 $ \hat{ \theta } (X_{1},X_{2}, \cdots ,X_{n}) $ 称为参数 $ \theta $ 的 \textbf{最大似然估计量}.
+	
+	若总体 $ X $ 属连续型,其概率密度 $ f(x; \theta ), \theta \in \Theta $ 的形式已知, $ \theta $ 为待估参数, $ \Theta $ 是 $ \theta $ 可能取值的范围.设 $ X_{1},X_{2}, \cdots ,X_{n} $ 是来自 $ X $ 的样本,则 $ X_{1},X_{2}, \cdots ,X_{n} $ 的联合密度为 $$ \prod_{i=1}^{n}f(x_{i}, \theta ). $$ 设 $ x_{1},x_{2}, \cdots ,x_{n} $ 是相应于样本 $ X_{1},X_{2}, \cdots ,X_{n} $ 的一个样本值,则随机点 $ (X_{1},X_{2}, \cdots ,X_{n}) $ 落在点 $ (x_{1},x_{2}, \cdots ,x_{n}) $ 的邻域(边长分别为 $ {\rm d}x_{1},{\rm d}x_{2}, \cdots ,{\rm d}x_{n} $ 的 $ n $ 维立方体)内的概率近似地为 $$ \prod_{i=1}^{n} f(x_{i}; \theta ){\rm d}x_{i}. $$ 其值岁 $ \theta $ 的取值而变化.与离散型的情况一样,我们取 $ \theta $ 的估计值 $ \hat{ \theta } $ 使概率取到最大值,但因子 $ \prod_{i=1}^{n}{\rm d}x_{i} $ 不随 $ \theta $ 而变,故只需考虑函数 $$ L( \theta )=L(x_{1},x_{2}, \cdots ,x_{n}; \theta )= \prod_{i=1}^{n}f(x_{i}; \theta ) $$ 的最大值.这里 $ L( \theta ) $ 称为样本的 \textbf{似然函数}.若 $$ L(x_{1},x_{2}, \cdots ,x_{n}; \hat{ \theta })= \max\limits_{ \theta \in \Theta }L(x_{1},x_{2}, \cdots ,x_{n}; \theta ), $$ 则称 $ \hat{ \theta }(x_{1},x_{2}, \cdots ,x_{n}) $ 为 $ \theta $ 的 \textbf{最大似然函数估计值},称 $ \hat{ \theta }(X_{1},X_{2}, \cdots ,X_{n}) $ 为 $ \theta $ 的 \textbf{最大似然估计值}.这样,确定最大似然估计量的问题就归结为微分学中的求最大值的问题了.在很多情况下, $ p(x; \theta ) $ 和 $ f(x; \theta ) $ 关于 $ \theta $ 可微,这是 $ \hat{ \theta } $ 常可从方程 $$ \frac{\rm d}{{\rm d} \theta } L( \theta )=0 $$ 解得.又因 $ L( \theta ) $ 与 $ \ln L( \theta ) $ 在同一 $ \theta $ 处取到极值,因此, $ \theta $ 的最大似然估计 $ \theta $ 也可以从 \textbf{对数似然方程} $$ \frac{\rm d}{{\rm d} \theta } \ln L( \theta )=0 $$ 求得.
+	
+	\subsection{估计量的评选标准}
+	
+	\subsubsection{无偏性}
+	
+	\textbf{无偏性:} 若估计量 $ \hat{ \theta } = \hat{ \theta } (X_{1},X_{2}, \cdots ,X_{n}) $ 的数学期望 $ E( \hat{ \theta } ) $ 存在,且对于任意 $ \theta \in \Theta $ 有 $$ E( \hat{ \theta } )= \theta , $$ 则称 $ \hat{ \theta } $ 是 $ \theta $ 的 \textbf{无偏估计量}.
+	
+	\subsubsection{有效性}
+	
+	\textbf{有效性:} 设 $ \hat{ \theta } _{1} = \hat{ \theta} _{1} (X_{1},X_{2}, \cdots ,X_{n}) $ 与 $ \hat{ \theta } _{1} = \hat{ \theta } _{1} (X_{1},X_{2}, \cdots ,X_{n}) $ 都是 $ \theta $ 的无偏估计量,若对于任意 $ \theta \in \Theta $ ,有 $$ D( \hat{ \theta } _{1} ) \le D( \hat{ \theta } _{1} ), $$ 且至少对于某一个 $ \theta \in \Theta $ 上市中的不等号成立,则称 $ \hat{ \theta } _{1} $ 较 $ \hat{ \theta } _{2} $ \textbf{有效}.
+	
+	\subsubsection{相合性}
+	
+	\textbf{相合性:} 设 $ \hat{ \theta } (X_{1},X_{2}, \cdots ,X_{n}) $ 为参数 $ \theta $ 的估计量,若对于任意 $ \theta \in \Theta $ ,当 $ n \to \infty $ 时, $ \hat{ \theta } (X_{1},X_{2}, \cdots ,X_{n}) $ 依概率收敛于 $ \theta $ ,则称 $ \hat{ \theta } $ 为 $ \theta $ 的 \textbf{相合估计量}. 即若对于任意 $ \theta \in \Theta $ 都满足:对于任意 $ \epsilon >0 $ ,有 $$ \lim\limits_{n \to \infty }P\{| \hat{ \theta } - \theta |< \epsilon \}=1, $$ 则称 $ \hat{ \theta } $ 是 $ \theta $ 的 \textbf{相合估计量}.
+	
+	\subsection{区间估计}
+	
+	设总体 $ X $ 的分布函数 $ F(x; \theta ) $ 含有一个未知参数 $ \theta , \theta \in \Theta ( \Theta  $ 是 $ \theta $ 可能取值的范围),对于给定值 $ \alpha (0< \alpha <1) $ ,若由来自 $ X $ 的样本 $ X_{1},X_{2}, \cdots ,X_{n} $ 确定的两个统计量 $ \underline{ \theta } = \underline{ \theta } (X_{1},X_{2}, \cdots ,X_{n}) $ 和 $ \bar{ \theta } = \bar{ \theta } (X_{1},X_{2}, \cdots ,X_{n})( \underline{ \theta } < \bar{ \theta } ) $ ,对于任意 $ \theta \in \Theta $ 满足 $$ P\{ \underline{ \theta } (X_{1},X_{2}, \cdots ,X_{n})< \theta < \bar{ \theta } (X_{1},X_{2}, \cdots ,X_{n}) \} \ge 1 - \alpha , $$ 则称随机区间 $ (\underline{ \theta } , \bar{ \theta } ) $ 是 $ \theta $ 的置信水平为 $ 1- \alpha $ 的 \textbf{置信区间}, $ \underline{ \theta } $ 和 $ \bar{ \theta } $ 分别称为置信水平为 $ 1- \alpha $ 的双侧置信区间的 \textbf{置信下限} 和 \textbf{置信上限}, $ 1- \alpha $ 称为 \textbf{置信水平}.
+	
+%	求未知参数 $ \theta $ 的置信区间的具体做法如下.
+%	\begin{enumerate}
+%		\item [1.] 寻求一个样本 $ X_{1},X_{2}, \cdots ,X_{n} $ 和 $ \theta $ 的函数 $ W=W(X_{1},X_{2}, \cdots ,X_{n}; \theta ), $ 使得 $ W $ 的分布不依赖于 $ \theta $ 以及其他未知参数,称具有这种性质的函数 $ % $ 为 \textbf{枢轴量}.
+%		\item [2.] 对于给定的置信水平 $ 1- \alpha $ 给定两个常数 $ a,b $ 使得 $$ P\{a<W(X_{1},X_{2}, \cdots ,X_{n}; \theta )<b\}=1- \alpha . $$ 若能从 $ a<W(X_{1},X_{2}, \cdots ,X_{n}; \theta )<b $ 得到与之等价的 $ \theta $ 的不等式 $ \underline{ \theta }< \theta < \bar{ \theta } $ ,其中 $ \underline{ \theta } = \underline{ \theta }(X_{1},X_{2}, \cdots ,X_{n}), \bar{ \theta }= \bar{ \theta }(X_{1},X_{2}, \cdots ,X_{n}) $ 都是统计量.那么 $ (\underline{ \theta } , \bar{ \theta } ) $ 就是 $ \theta $ 的一个置信水平为 $ 1- \alpha $ 的置信区间.
+%	\end{enumerate}
+
+%	枢轴量 $ W(X_{1},X_{2}, \cdots ,X_{n}; \theta ) $ 的构造,通常可以从 $ \theta $ 的点估计着手考虑.通常的正态总体的参数的置信区间可以用上述步骤推得.
+	
+	\subsection{正态总体均值与方差的区间估计}
+	
+	\subsubsection{一个正态总体 $ X \sim N ( \mu , \sigma ^{2}) $ 的情形}
+	
+	\begin{enumerate}
+		\item [1.] \textbf{方差 $ \sigma ^{2} $ 已知, $ \mu $ 的置信水平为 $ 1- \alpha $ 的置信区间} \\ 采用枢轴量 $ \frac{ \bar{X} - \mu }{ \frac{ \sigma }{ \sqrt{n} } } $ ,得 $ \mu $ 的一个置信水平为 $ 1- \alpha $ 的置信区间为 $$ ( \bar{X} - \frac{ \sigma z_{ \frac{ \alpha }{2} } }{ \sqrt{n} }, \bar{X} + \frac{ \sigma z_{ \frac{ \alpha }{2} } }{ \sqrt{n} }); $$
+		\item [2.] \textbf{方差 $ \sigma ^{2} $ 未知, $ \mu $ 的置信区间} \\ 采用枢轴量 $ \frac{ \bar{X} - \mu }{ \frac{ S }{ \sqrt{n} } } $ ,得 $ \mu $ 的一个置信水平为 $ 1- \alpha $ 的置信区间为 $$ ( \bar{X} - \frac{S t_{ \frac{ \alpha }{2} } (n-1)}{ \sqrt{n} } , \bar{X} + \frac{S t_{ \frac{ \alpha }{2} } (n-1)}{ \sqrt{n} } ). $$
+		\item [3.] \textbf{当 $ \mu $ 未知时，方差 $ \sigma ^{2} $的置信区间} \\ 采用枢轴量 $ \frac{(n-1)S^{2}}{ \sigma ^{2}} $ ，得 $ \sigma ^{2} $ 的置信区间为 $$ ( \frac{(n-1)S^{2}}{ \chi _{ \frac{ \alpha }{2} }^{2}(n-1)} , \frac{(n-1)S^{2}}{ \chi _{1- \frac{ \alpha }{2} }^{2}(n-1)} ) $$
+	\end{enumerate}
+	
+\end{document}
